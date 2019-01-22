@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css">
+
+
+
+  
+  
+    
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Han/3.3.0/han.min.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.css">
+
+
+
+
+
+
+
+  
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="/css/main.css?v=6.7.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.7.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.7.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.7.0',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    fastclick: true,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="#Typora For Markdown 语法 Learning-Markdown (Markdown 入门参考)[TOC] ###数学表达式 要启用这个功能，首先到Preference-&amp;gt;Editor中启用。然后使用$符号包裹 Tex 命令，例如：$lim_{x \to \infty} \ exp(-x)=0$将产生如下的数学表达式： $\lim_{x \to \infty} \exp(-">
+<meta name="keywords" content="前端开发,Markdown">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Typora For Markdown 语法">
+<meta property="og:url" content="https://js-mark.com/2018/03/12/typora/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="#Typora For Markdown 语法 Learning-Markdown (Markdown 入门参考)[TOC] ###数学表达式 要启用这个功能，首先到Preference-&amp;gt;Editor中启用。然后使用$符号包裹 Tex 命令，例如：$lim_{x \to \infty} \ exp(-x)=0$将产生如下的数学表达式： $\lim_{x \to \infty} \exp(-">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://typora.io/img/drag-img.gif">
+<meta property="og:updated_time" content="2019-01-22T12:19:03.994Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Typora For Markdown 语法">
+<meta name="twitter:description" content="#Typora For Markdown 语法 Learning-Markdown (Markdown 入门参考)[TOC] ###数学表达式 要启用这个功能，首先到Preference-&amp;gt;Editor中启用。然后使用$符号包裹 Tex 命令，例如：$lim_{x \to \infty} \ exp(-x)=0$将产生如下的数学表达式： $\lim_{x \to \infty} \exp(-">
+<meta name="twitter:image" content="http://typora.io/img/drag-img.gif">
+
+
+
+
+
+
+  <link rel="canonical" href="https://js-mark.com/2018/03/12/typora/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Typora For Markdown 语法 | Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">19</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">5</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">11</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-commonweal">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/404/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>公益 404</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://js-mark.com/2018/03/12/typora/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark">
+      <meta itemprop="description" content="Personal Technology Blog">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Typora For Markdown 语法
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-03-12 00:00:00" itemprop="dateCreated datePublished" datetime="2018-03-12T00:00:00+08:00">2018-03-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-01-22 20:19:03" itemprop="dateModified" datetime="2019-01-22T20:19:03+08:00">2019-01-22</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/软件工具/" itemprop="url" rel="index"><span itemprop="name">软件工具</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>#Typora For Markdown 语法</p>
+<p><span class="exturl" data-url="aHR0cDovL3hpYW5iYWkubWUvbGVhcm4tbWQvaW5kZXguaHRtbA==" title="http://xianbai.me/learn-md/index.html">Learning-Markdown (Markdown 入门参考)<i class="fa fa-external-link"></i></span><br>[TOC]</p>
+<p>###数学表达式</p>
+<p>要启用这个功能，首先到<code>Preference</code>-&gt;<code>Editor</code>中启用。然后使用<code>$</code>符号包裹 Tex 命令，例如：<code>$lim_{x \to \infty} \ exp(-x)=0$</code>将产生如下的数学表达式：</p>
+<p>$\lim_{x \to \infty} \exp(-x)=0$</p>
+<p>###下标</p>
+<p>下标使用<code>~</code>包裹，例如：<code>H~2~O</code>将产生 H~2~O, 即水的分子式。</p>
+<p>###上标</p>
+<p>上标使用<code>^</code>包裹，例如：<code>y^2^=4</code>将产生表达式 y^2^ = 4</p>
+<p>###插入表情:happy:</p>
+<p>使用<code>:happy:</code>输入表情:happy:,使用<code>:sad:</code>输入表情:sad:,使用<code>:cry:</code>输入表情:cry:等。以此类推！</p>
+<h3 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h3><p>用 HTML 的语法<code>&lt;u&gt;Underline&lt;/u&gt;</code>将产生下划线<u>Underline</u>.</p>
+<h3 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h3><p>GFM 添加了删除文本的语法，这是标准的 Markdown 语法木有的。使用<code>~~</code>包裹的文本将会具有删除的样式，例如<code>~删除文本~</code>将产生<del>删除文本</del>的样式。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><ul>
+<li>使用`包裹的内容将会以代码样式显示，例如</li>
+</ul>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用`printf()`</span><br></pre></td></tr></table></figure>
+<p>则会产生<code>printf()</code>样式。</p>
+<ul>
+<li><p>输入<code>~~~</code>或者<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- `</span><br></pre></td></tr></table></figure></p>
+<p>​<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> Class HelloWorld&#123;</span><br><span class="line">  System.out.println(<span class="string">"Hello World!"</span>);</span><br><span class="line">&#125;</span><br><span class="line">​</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">将会产生</span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line">public Class HelloWorld&#123;</span><br><span class="line">  System.out.println(&quot;Hello World!&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><p>使用两个*号或者两个_包裹的内容将会被强调。例如</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**使用两个*号强调内容**</span></span><br><span class="line"><span class="strong">__使用两个下划线强调内容__</span></span><br></pre></td></tr></table></figure>
+<p>将会输出</p>
+<p><strong>使用两个*号强调内容</strong><br><strong>使用两个下划线强调内容</strong><br>Typroa 推荐使用两个*号。</p>
+<h3 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h3><p>在标准的 Markdown 语法中，*和_包裹的内容会是斜体显示，但是 GFM 下划线一般用来分隔人名和代码变量名，因此我们推荐是用星号来包裹斜体内容。如果要显示星号，则使用转义：</p>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">\*</span></span><br></pre></td></tr></table></figure>
+<h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><p>我们可以通过拖拉的方式，将本地文件夹中的图片或者网络上的图片插入。</p>
+<p><img src="http://typora.io/img/drag-img.gif" alt="drag and drop image"></p>
+<p>​</p>
+<p>​</p>
+</li>
+</ul>
+<h3 id="插入-URL-连接"><a href="#插入-URL-连接" class="headerlink" title="插入 URL 连接"></a>插入 URL 连接</h3><p>使用尖括号包裹的 url 将产生一个连接，例如：<code>&lt;www.baidu.com&gt;</code>将产生连接:&lt;<span class="exturl" data-url="aHR0cDovL3d3dy5iYWlkdS5jb20mZ3Q7" title="http://www.baidu.com&gt;">www.baidu.com&gt;<i class="fa fa-external-link"></i></span>.</p>
+<p>如果是标准的 url，则会自动产生连接，例如:<span class="exturl" data-url="aHR0cDovL3d3dy5nb29nbGUuY29t" title="http://www.google.com">www.google.com<i class="fa fa-external-link"></i></span></p>
+<h3 id="目录列表-Table-of-Contents（TOC）"><a href="#目录列表-Table-of-Contents（TOC）" class="headerlink" title="目录列表 Table of Contents（TOC）"></a>目录列表 Table of Contents（TOC）</h3><p>输入[toc]然后回车，将会产生一个目录，这个目录抽取了文章的所有标题，自动更新内容。</p>
+<h3 id="水平分割线"><a href="#水平分割线" class="headerlink" title="水平分割线"></a>水平分割线</h3><p>使用<code>***</code>或者<code>---</code>，然后回车，来产生水平分割线。</p>
+<hr>
+<h3 id="标注"><a href="#标注" class="headerlink" title="标注"></a>标注</h3><p>我们可以对某一个词语进行标注。例如</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">某些人用过了才知道<span class="selector-attr">[^注释]</span></span><br><span class="line"><span class="selector-attr">[^注释]</span><span class="selector-pseudo">:Somebody</span> <span class="selector-tag">that</span> <span class="selector-tag">I</span> <span class="selector-tag">used</span> <span class="selector-tag">to</span> <span class="selector-tag">know</span>.</span><br></pre></td></tr></table></figure>
+<p>将产生：</p>
+<p>某些人用过了才知道[^注释]<br>[^注释]: Somebody that I used to know.</p>
+<p>把鼠标放在<code>注释</code>上，将会有提示内容。</p>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="params">|姓名|</span>性别<span class="params">|毕业学校|</span>工资<span class="params">|</span></span><br><span class="line"><span class="params">|</span><span class="symbol">:---|</span><span class="symbol">:---</span><span class="symbol">:|</span><span class="symbol">:---</span><span class="symbol">:|---</span><span class="symbol">:|</span></span><br><span class="line"><span class="params">|杨洋|</span>男<span class="params">|重庆交通大学|</span><span class="number">3200</span><span class="params">|</span></span><br><span class="line"><span class="params">|</span>峰哥<span class="params">|男|</span>贵州大学<span class="params">|5000|</span></span><br><span class="line"><span class="params">|坑货|</span>女<span class="params">|北京大学|</span><span class="number">2000</span><span class="params">|</span></span><br></pre></td></tr></table></figure>
+<p>将产生:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">姓名</th>
+<th style="text-align:center">性别</th>
+<th style="text-align:center">毕业学校</th>
+<th style="text-align:right">工资</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">杨洋</td>
+<td style="text-align:center">男</td>
+<td style="text-align:center">重庆交通大学</td>
+<td style="text-align:right">3200</td>
+</tr>
+<tr>
+<td style="text-align:left">峰哥</td>
+<td style="text-align:center">男</td>
+<td style="text-align:center">贵州大学</td>
+<td style="text-align:right">5000</td>
+</tr>
+<tr>
+<td style="text-align:left">坑货</td>
+<td style="text-align:center">女</td>
+<td style="text-align:center">北京大学</td>
+<td style="text-align:right">2000</td>
+</tr>
+</tbody>
+</table>
+<p>其中代码的第二行指定对齐的方式，第一个是左对齐，第二个和第三个是居中，最后一个是右对齐。</p>
+<h3 id="数学表达式块"><a href="#数学表达式块" class="headerlink" title="数学表达式块"></a>数学表达式块</h3><p>输入两个美元符号，然后回车，就可以输入数学表达式块了。例如：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="formula">$$<span class="tag">\<span class="name">mathbf</span><span class="string">&#123;V&#125;</span></span>_1 <span class="tag">\<span class="name">times</span></span> <span class="tag">\<span class="name">mathbf</span><span class="string">&#123;V&#125;</span></span>_2 =  <span class="tag">\<span class="name">begin</span><span class="string">&#123;vmatrix&#125;</span></span> <span class="tag">\<span class="name">mathbf</span><span class="string">&#123;i&#125;</span></span> &amp; <span class="tag">\<span class="name">mathbf</span><span class="string">&#123;j&#125;</span></span> &amp; <span class="tag">\<span class="name">mathbf</span><span class="string">&#123;k&#125;</span></span> <span class="tag">\<span class="name">\</span></span><span class="tag">\<span class="name">frac</span><span class="string">&#123;\partial X&#125;</span><span class="string">&#123;\partial u&#125;</span></span> &amp;  <span class="tag">\<span class="name">frac</span><span class="string">&#123;\partial Y&#125;</span><span class="string">&#123;\partial u&#125;</span></span> &amp; 0 <span class="tag">\<span class="name">\</span></span><span class="tag">\<span class="name">frac</span><span class="string">&#123;\partial X&#125;</span><span class="string">&#123;\partial v&#125;</span></span> &amp;  <span class="tag">\<span class="name">frac</span><span class="string">&#123;\partial Y&#125;</span><span class="string">&#123;\partial v&#125;</span></span> &amp; 0 <span class="tag">\<span class="name">\</span></span><span class="tag">\<span class="name">end</span><span class="string">&#123;vmatrix&#125;</span></span>$$</span></span><br></pre></td></tr></table></figure>
+<p>将会产生:</p>
+<p>$$\mathbf{V}_1 \times \mathbf{V}_2 = \begin{vmatrix} \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\frac{\partial X}{\partial u} &amp; \frac{\partial Y}{\partial u} &amp; 0 \\frac{\partial X}{\partial v} &amp; \frac{\partial Y}{\partial v} &amp; 0 \\end{vmatrix}$$</p>
+<h3 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h3><p>使用如下的代码创建任务列表，在[]中输入 x 表示完成，也可以通过点击选择完成或者没完成。</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- <span class="string">[ ]</span> 吃饭</span><br><span class="line">- <span class="string">[ ]</span> 逛街</span><br><span class="line">- <span class="string">[ ]</span> 看电影</span><br><span class="line">- <span class="string">[ ]</span> 约泡</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>[x] 吃饭</p>
+<pre><code>​
+</code></pre></li>
+<li><p>[x] 逛街</p>
+<pre><code>​
+</code></pre></li>
+<li><p>[x] 看电影</p>
+<pre><code>​
+</code></pre></li>
+<li><p>[x] 约泡</p>
+</li>
+</ul>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>输入+, -, *,创建无序的列表，使用任意数字开头，创建有序列表，例如：</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*<span class="strong">*无序的列表*</span><span class="strong">*</span></span><br><span class="line"><span class="strong">*</span> tfboys</span><br><span class="line"><span class="bullet">* </span>杨洋</span><br><span class="line"><span class="bullet">* </span>我爱你</span><br></pre></td></tr></table></figure>
+<p><strong>无序的列表</strong></p>
+<ul>
+<li>tfboys</li>
+<li>杨洋</li>
+<li>我爱你</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**有序的列表**</span></span><br><span class="line"><span class="bullet">1. </span>苹果</span><br><span class="line"><span class="bullet">6. </span>香蕉</span><br><span class="line"><span class="bullet">10. </span>我都不喜欢</span><br></pre></td></tr></table></figure>
+<p><strong>有序的列表</strong></p>
+<ol>
+<li>苹果</li>
+<li>香蕉</li>
+<li>我都不喜欢</li>
+</ol>
+<h3 id="块引用"><a href="#块引用" class="headerlink" title="块引用"></a>块引用</h3><p>使用&gt;来插入块引用。例如：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">这是一个块引用！</span></span><br></pre></td></tr></table></figure>
+<p>将产生：</p>
+<blockquote>
+<p>这是一个块引用！</p>
+</blockquote>
+<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>使用#表示一级标题，##表示二级标题，以此类推，有 6 个标题。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端开发/" rel="tag"># 前端开发</a>
+          
+            <a href="/tags/Markdown/" rel="tag"># Markdown</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/29/Webpack/" rel="next" title="Webpack打包工具总结">
+                <i class="fa fa-chevron-left"></i> Webpack打包工具总结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/12/Vuex/" rel="prev" title="Vuex 状态管理插件学习">
+                Vuex 状态管理插件学习 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Mark">
+            
+              <p class="site-author-name" itemprop="name">Mark</p>
+              <p class="site-description motion-element" itemprop="description">Personal Technology Blog</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0pTLW1hcms=" title="GitHub &rarr; https://github.com/JS-mark"><i class="fa fa-fw fa-github"></i></span>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="bWFyazpzdW5kdW8zMTk1QHFxLmNvbQ==" title="E-Mail &rarr; mark:sunduo3195@qq.com"><i class="fa fa-fw fa-envelope"></i></span>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#下划线"><span class="nav-number">1.</span> <span class="nav-text">下划线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除线"><span class="nav-number">2.</span> <span class="nav-text">删除线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#强调"><span class="nav-number">4.</span> <span class="nav-text">强调</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#斜体"><span class="nav-number">5.</span> <span class="nav-text">斜体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插入图片"><span class="nav-number">6.</span> <span class="nav-text">插入图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插入-URL-连接"><span class="nav-number">7.</span> <span class="nav-text">插入 URL 连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目录列表-Table-of-Contents（TOC）"><span class="nav-number">8.</span> <span class="nav-text">目录列表 Table of Contents（TOC）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#水平分割线"><span class="nav-number">9.</span> <span class="nav-text">水平分割线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标注"><span class="nav-number">10.</span> <span class="nav-text">标注</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表格"><span class="nav-number">11.</span> <span class="nav-text">表格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数学表达式块"><span class="nav-number">12.</span> <span class="nav-text">数学表达式块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#任务列表"><span class="nav-number">13.</span> <span class="nav-text">任务列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表"><span class="nav-number">14.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#块引用"><span class="nav-number">15.</span> <span class="nav-text">块引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标题"><span class="nav-number">16.</span> <span class="nav-text">标题</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mark</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+  
+    
+    
+      
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1/canvas-nest.min.js"></script>
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+    
+  
+  <script id="ribbon" size="300" alpha="0.6" zindex="-1" src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js"></script>
+
+
+
+  
+
+
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.min.js"></script>
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.ui.min.js"></script>
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.js"></script>
+
+  
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three.min.js"></script>
+
+  
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/canvas_lines.min.js"></script>
+
+  
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1/reading_progress.min.js"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.7.0"></script>
+
+  <script src="/js/src/motion.js?v=6.7.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.7.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.7.0"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/js/src/post-details.js?v=6.7.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+    
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/pangu/3.3.0/pangu.min.js"></script>
+  <script>pangu.spacingPage();</script>
+
+
+  
+  <script src="/js/src/js.cookie.js?v=6.7.0"></script>
+  <script src="/js/src/scroll-cookie.js?v=6.7.0"></script>
+
+
+  
+  <script src="/js/src/exturl.js?v=6.7.0"></script>
+
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
+
+  
+  
+
+  
+  
+
+  
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"log":false});</script></body>
+</html>

@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css">
+
+
+
+  
+  
+    
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Han/3.3.0/han.min.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.css">
+
+
+
+
+
+
+
+  
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="/css/main.css?v=6.7.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.7.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.7.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.7.0',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    fastclick: true,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="前言 为什么学习脚本编写??? 你有没有遇到过这样场景，繁杂并且重复的操作 N 多件~~~ 那么这个时候我们是不是可以想一些其他更快捷、更方便的方法呢！（答案是肯定的，肯定有撒因为我们人类可是很懒的高级哺乳动物）好了！那么我们步入今天的正题！  一、shell 中特殊变量12345678910#!/bin/bashecho $0    # 当前脚本的文件名（间接运行时还包括绝对路径）。echo $">
+<meta name="keywords" content="VSCode,系统底层,Shell,脚本操作">
+<meta property="og:type" content="article">
+<meta property="og:title" content="shell脚本学习">
+<meta property="og:url" content="https://js-mark.com/2018/12/24/shell脚本学习/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="前言 为什么学习脚本编写??? 你有没有遇到过这样场景，繁杂并且重复的操作 N 多件~~~ 那么这个时候我们是不是可以想一些其他更快捷、更方便的方法呢！（答案是肯定的，肯定有撒因为我们人类可是很懒的高级哺乳动物）好了！那么我们步入今天的正题！  一、shell 中特殊变量12345678910#!/bin/bashecho $0    # 当前脚本的文件名（间接运行时还包括绝对路径）。echo $">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://js-mark.com/assets/img/2018/12/20150424040700733.jpg">
+<meta property="og:updated_time" content="2019-01-22T12:19:03.994Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="shell脚本学习">
+<meta name="twitter:description" content="前言 为什么学习脚本编写??? 你有没有遇到过这样场景，繁杂并且重复的操作 N 多件~~~ 那么这个时候我们是不是可以想一些其他更快捷、更方便的方法呢！（答案是肯定的，肯定有撒因为我们人类可是很懒的高级哺乳动物）好了！那么我们步入今天的正题！  一、shell 中特殊变量12345678910#!/bin/bashecho $0    # 当前脚本的文件名（间接运行时还包括绝对路径）。echo $">
+<meta name="twitter:image" content="https://js-mark.com/assets/img/2018/12/20150424040700733.jpg">
+
+
+
+
+
+
+  <link rel="canonical" href="https://js-mark.com/2018/12/24/shell脚本学习/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>shell脚本学习 | Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">19</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">5</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">11</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-commonweal">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/404/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>公益 404</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://js-mark.com/2018/12/24/shell脚本学习/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark">
+      <meta itemprop="description" content="Personal Technology Blog">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">shell脚本学习
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-24 00:00:00" itemprop="dateCreated datePublished" datetime="2018-12-24T00:00:00+08:00">2018-12-24</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-01-22 20:19:03" itemprop="dateModified" datetime="2019-01-22T20:19:03+08:00">2019-01-22</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/系统命令/" itemprop="url" rel="index"><span itemprop="name">系统命令</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><ul>
+<li>为什么学习脚本编写???</li>
+<li>你有没有遇到过这样场景，繁杂并且重复的操作 N 多件~~~</li>
+<li>那么这个时候我们是不是可以想一些其他更快捷、更方便的方法呢！（答案是肯定的，肯定有撒因为我们人类可是很懒的高级哺乳动物）<br><img src="/assets/img/2018/12/20150424040700733.jpg" alt="image"><br>好了！那么我们步入今天的正题！</li>
+</ul>
+<h3 id="一、shell-中特殊变量"><a href="#一、shell-中特殊变量" class="headerlink" title="一、shell 中特殊变量"></a>一、shell 中特殊变量</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$0</span>    <span class="comment"># 当前脚本的文件名（间接运行时还包括绝对路径）。</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$n</span>    <span class="comment"># 传递给脚本或函数的参数。n 是一个数字，表示第几个参数。例如，第一个参数是 $1 。</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$#</span>    <span class="comment"># 传递给脚本或函数的参数个数。</span></span><br><span class="line"><span class="built_in">echo</span> $*    <span class="comment"># 传递给脚本或函数的所有参数。</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$@</span>    <span class="comment"># 传递给脚本或函数的所有参数。被双引号 (" ") 包含时，与 $* 不同，下面将会讲到。</span></span><br><span class="line"><span class="built_in">echo</span> $?    <span class="comment"># 上个命令的退出状态，或函数的返回值。</span></span><br><span class="line"><span class="built_in">echo</span> $$    <span class="comment"># 当前 Shell 进程 ID。对于 Shell 脚本，就是这些脚本所在的进程 ID。</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$_</span>    <span class="comment"># 上一个命令的最后一个参数</span></span><br><span class="line"><span class="built_in">echo</span> $!    <span class="comment"># 后台运行的最后一个进程的 ID 号</span></span><br></pre></td></tr></table></figure>
+<p>示例：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 现在保存为一个test.sh脚本，然后加上几个参数运行：</span></span><br><span class="line">$ ./test.sh <span class="built_in">test</span> test1 test2 test3 test4</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line">./test.sh                      <span class="comment"># $0</span></span><br><span class="line">                               <span class="comment"># $n</span></span><br><span class="line">5                              <span class="comment"># $#</span></span><br><span class="line"><span class="built_in">test</span> test1 test2 test3 test4   <span class="comment"># $*</span></span><br><span class="line"><span class="built_in">test</span> test1 test2 test3 test4   <span class="comment"># $@</span></span><br><span class="line">0                              <span class="comment"># $?</span></span><br><span class="line">12305                          <span class="comment"># $$</span></span><br><span class="line">12305                          <span class="comment"># $_</span></span><br><span class="line">                               <span class="comment"># $!</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>&emsp;$<em> 和 $@ 都表示传递给函数或脚本的所有参数，不被双引号 (“”) 包含时，都以”$1””$2” … “$n” 的形式输出所有参数。<br> &emsp;但是当它们被双引号 (“”) 包含时，”$</em>“会将所有的参数作为一个整体，以”$1 $2 … $n”的形式输出所有参数；”$@”会将各个参数分开，以”$1””$2” … “$n” 的形式输出所有参数。</p>
+</blockquote>
+<p>例如：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"\$*="</span> $*</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"\"\$*\"="</span> <span class="string">"$*"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"\$@="</span> <span class="variable">$@</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"\"\$@\"="</span> <span class="string">"<span class="variable">$@</span>"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"print each param from \$*"</span></span><br><span class="line"><span class="keyword">for</span> var <span class="keyword">in</span> $*</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"<span class="variable">$var</span>"</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"print each param from \$@"</span></span><br><span class="line"><span class="keyword">for</span> var <span class="keyword">in</span> <span class="variable">$@</span></span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"<span class="variable">$var</span>"</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"从 \"\$*\" 获取并打印每一个参数"</span></span><br><span class="line"><span class="keyword">for</span> var <span class="keyword">in</span> <span class="string">"$*"</span></span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"<span class="variable">$var</span>"</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"从 \"\$@\" 获取并打印每一个参数"</span></span><br><span class="line"><span class="keyword">for</span> var <span class="keyword">in</span> <span class="string">"<span class="variable">$@</span>"</span></span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"<span class="variable">$var</span>"</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure></p>
+<p>返回结果： </p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$*= <span class="built_in">test</span> test1 test2</span><br><span class="line"><span class="string">"$*"</span>= <span class="built_in">test</span> test1 test2</span><br><span class="line"><span class="variable">$@</span>= <span class="built_in">test</span> test1 test2</span><br><span class="line"><span class="string">"<span class="variable">$@</span>"</span>= <span class="built_in">test</span> test1 test2</span><br><span class="line"><span class="built_in">print</span> each param from $*</span><br><span class="line"><span class="built_in">test</span></span><br><span class="line">test1</span><br><span class="line">test2</span><br><span class="line"><span class="built_in">print</span> each param from <span class="variable">$@</span></span><br><span class="line"><span class="built_in">test</span></span><br><span class="line">test1</span><br><span class="line">test2</span><br><span class="line">从 <span class="string">"$*"</span> 获取并打印每一个参数</span><br><span class="line"><span class="built_in">test</span> test1 test2</span><br><span class="line">从 <span class="string">"<span class="variable">$@</span>"</span> 获取并打印每一个参数</span><br><span class="line"><span class="built_in">test</span></span><br><span class="line">test1</span><br><span class="line">test2</span><br></pre></td></tr></table></figure>
+<h3 id="二、手工处理参数"><a href="#二、手工处理参数" class="headerlink" title="二、手工处理参数"></a>二、手工处理参数</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> [ -n <span class="string">"<span class="variable">$1</span>"</span> ]  </span><br><span class="line"><span class="keyword">do</span>  </span><br><span class="line">  <span class="keyword">case</span> <span class="string">"<span class="variable">$1</span>"</span> <span class="keyword">in</span>   </span><br><span class="line">    -a)  </span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"发现 -a 选项"</span>  </span><br><span class="line">        ;;  </span><br><span class="line">    -b)  </span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"发现 -b 选项"</span>  </span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"-b 选项的参数值是：<span class="variable">$2</span>"</span>   </span><br><span class="line">        <span class="built_in">shift</span>  </span><br><span class="line">        ;;  </span><br><span class="line">    -c)  </span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"发现 -c 选项"</span>  </span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"-c 选项的参数值是：<span class="variable">$2</span>"</span>  </span><br><span class="line">        <span class="built_in">shift</span>  </span><br><span class="line">        ;;  </span><br><span class="line">    -d)  </span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"发现 -d 选项"</span>  </span><br><span class="line">        ;;  </span><br><span class="line">    *)  </span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"<span class="variable">$1</span> is not an option"</span>  </span><br><span class="line">        ;;  </span><br><span class="line">  <span class="keyword">esac</span>  </span><br><span class="line">  <span class="built_in">shift</span>  </span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行：./test.sh -a -b t2 -c t3 -d</span></span><br><span class="line"><span class="comment"># 返回结果</span></span><br><span class="line">发现 -a 选项</span><br><span class="line">发现 -b 选项</span><br><span class="line">-b 选项的参数值是：t2</span><br><span class="line">发现 -c 选项</span><br><span class="line">-c 选项的参数值是：t3</span><br><span class="line">发现 -d 选项</span><br></pre></td></tr></table></figure>
+<h3 id="三、getopt-处理参数"><a href="#三、getopt-处理参数" class="headerlink" title="三、getopt 处理参数"></a>三、getopt 处理参数</h3><p>下面 getopt ab:c:d “$@” 中的 abcd 分别代表四个选项，后面带有冒号的表示选项需要参数值。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">GETOPTOUT=`getopt ab:c:d <span class="string">"<span class="variable">$@</span>"</span>`</span><br><span class="line">  <span class="built_in">set</span> -- <span class="variable">$GETOPTOUT</span></span><br><span class="line">  <span class="keyword">while</span> [ -n <span class="string">"<span class="variable">$1</span>"</span> ]</span><br><span class="line">  <span class="keyword">do</span>  </span><br><span class="line">  <span class="keyword">case</span> <span class="variable">$1</span> <span class="keyword">in</span></span><br><span class="line">    -a)  </span><br><span class="line">      <span class="built_in">echo</span> <span class="string">"发现 -a 选项"</span></span><br><span class="line">      ;;  </span><br><span class="line">    -b)  </span><br><span class="line">      <span class="built_in">echo</span> <span class="string">"发现 -b 选项"</span></span><br><span class="line">      <span class="built_in">echo</span> <span class="string">"-b 选项的参数值是：<span class="variable">$2</span>"</span></span><br><span class="line">      <span class="built_in">shift</span>  </span><br><span class="line">      ;;  </span><br><span class="line">    -c)  </span><br><span class="line">      <span class="built_in">echo</span> <span class="string">"发现 -c 选项"</span></span><br><span class="line">      <span class="built_in">echo</span> <span class="string">"-c 选项的参数值是：<span class="variable">$2</span>"</span></span><br><span class="line">      <span class="built_in">shift</span>  </span><br><span class="line">      ;;  </span><br><span class="line">    -d)  </span><br><span class="line">      <span class="built_in">echo</span> <span class="string">"发现 -d 选项"</span></span><br><span class="line">      ;;  </span><br><span class="line">    --)  </span><br><span class="line">      <span class="built_in">shift</span>  </span><br><span class="line">      <span class="built_in">break</span>  </span><br><span class="line">      ;;  </span><br><span class="line">    *)  </span><br><span class="line">      <span class="built_in">echo</span> <span class="string">"未知选项:"</span><span class="variable">$1</span><span class="string">""</span>  </span><br><span class="line">      ;;  </span><br><span class="line">  <span class="keyword">esac</span>  </span><br><span class="line">  <span class="built_in">shift</span>  </span><br><span class="line">  <span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行</span></span><br><span class="line"> ./proxychains4.sh -a -b t2 -c t3 -d</span><br><span class="line"><span class="comment"># 返回</span></span><br><span class="line">发现 -a 选项</span><br><span class="line">发现 -b 选项</span><br><span class="line">-b 选项的参数值是：t2</span><br><span class="line">发现 -c 选项</span><br><span class="line">-c 选项的参数值是：t3</span><br><span class="line">发现 -d 选项</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">ARGV=($(getopt -o 短选项1[:]短选项2[:]...[:]短选项n -l 长选项1,长选项2,...,长选项n -- <span class="string">"<span class="variable">$@</span>"</span>))</span><br><span class="line"><span class="built_in">eval</span> <span class="built_in">set</span> -- <span class="string">"<span class="variable">$ARGV</span>"</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">true</span></span><br><span class="line"><span class="keyword">do</span></span><br><span class="line"><span class="keyword">case</span> <span class="string">"<span class="variable">$1</span>"</span> <span class="keyword">in</span></span><br><span class="line">  -短选项1|--长选项1)</span><br><span class="line">    process</span><br><span class="line">    <span class="built_in">shift</span></span><br><span class="line">    ;;</span><br><span class="line">  -短选项2|--长选项2)</span><br><span class="line">    <span class="comment"># 获取选项</span></span><br><span class="line">    opt = <span class="variable">$2</span></span><br><span class="line">    process</span><br><span class="line">    <span class="built_in">shift</span> 2</span><br><span class="line">    ;;</span><br><span class="line"></span><br><span class="line">  ... ...</span><br><span class="line"></span><br><span class="line">  -短选项3|--长选项3)</span><br><span class="line">    process</span><br><span class="line">    ;;</span><br><span class="line">  --)</span><br><span class="line">    <span class="built_in">break</span></span><br><span class="line">    ;;</span><br><span class="line"><span class="keyword">esac</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>关于 eval 这个命令，用一个小例子解释：</p>
+</blockquote>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">foo=10</span><br><span class="line">x=foo</span><br><span class="line">y=<span class="string">'$'</span><span class="variable">$x</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$y</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$foo</span></span><br><span class="line"><span class="built_in">eval</span> y=<span class="string">'$'</span><span class="variable">$x</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$y</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回</span></span><br><span class="line"><span class="variable">$foo</span></span><br><span class="line">10</span><br><span class="line">10</span><br><span class="line"></span><br><span class="line"><span class="comment"># 因为我一般用这个命令连接构建命令参数，所以你可以简单理解为执行两次（虽然不太对）。通过添加 eval 可以把参数解析后再执行。</span></span><br></pre></td></tr></table></figure>
+<h3 id="四、getopts-处理参数"><a href="#四、getopts-处理参数" class="headerlink" title="四、getopts 处理参数"></a>四、getopts 处理参数</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="built_in">getopts</span> :ab:c:d ARGS  </span><br><span class="line"><span class="keyword">do</span>  </span><br><span class="line"><span class="keyword">case</span> <span class="variable">$ARGS</span> <span class="keyword">in</span>   </span><br><span class="line">  a)  </span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"发现 -a 选项"</span>  </span><br><span class="line">    ;;  </span><br><span class="line">  b)  </span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"发现 -b 选项"</span>  </span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"-b 选项的值是：<span class="variable">$OPTARG</span>"</span>  </span><br><span class="line">    ;;  </span><br><span class="line">  c)  </span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"发现 -c 选项"</span>  </span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"-c 选项的值是：<span class="variable">$OPTARG</span>"</span>  </span><br><span class="line">    ;;  </span><br><span class="line">  d)  </span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"发现 -d 参数"</span>  </span><br><span class="line">    ;;  </span><br><span class="line">  *)  </span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"未知选项：<span class="variable">$ARGS</span>"</span></span><br><span class="line">    ;;</span><br><span class="line"><span class="keyword">esac</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<p>这种方法最方便简单。接下来基于这种方法深入讲解。</p>
+<h3 id="五、传参意外处理"><a href="#五、传参意外处理" class="headerlink" title="五、传参意外处理"></a>五、传参意外处理</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"?"</span>)</span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"未知选项 <span class="variable">$OPTARG</span>"</span></span><br><span class="line">  ;;</span><br><span class="line"><span class="string">":"</span>)</span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"没有输入任何选项 <span class="variable">$OPTARG</span>"</span></span><br><span class="line">  ;;</span><br><span class="line">*)</span><br><span class="line">  <span class="comment"># 发生不能预料的错误时。</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"处理选项时出现未知错误"</span></span><br><span class="line">  ;;</span><br></pre></td></tr></table></figure>
+<h3 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h3><blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC9kM2NkMzZjOTdhYmM=" title="https://www.jianshu.com/p/d3cd36c97abc">Shell 脚本传参方法总结<i class="fa fa-external-link"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly93d3cuaWJtLmNvbS9kZXZlbG9wZXJ3b3Jrcy9jbi9saW51eC9sLWJhc2gtcGFyYW1ldGVycy5odG1s" title="https://www.ibm.com/developerworks/cn/linux/l-bash-parameters.html">Bash 参数和参数扩展<i class="fa fa-external-link"></i></span><br><span class="exturl" data-url="aHR0cDovL3d3dy4zNjF3YXkuY29tL3NoZWxsLWdldG9wdC80OTgxLmh0bWw=" title="http://www.361way.com/shell-getopt/4981.html">shell中的getopt与getopts<i class="fa fa-external-link"></i></span></p>
+</blockquote>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/VSCode/" rel="tag"># VSCode</a>
+          
+            <a href="/tags/系统底层/" rel="tag"># 系统底层</a>
+          
+            <a href="/tags/Shell/" rel="tag"># Shell</a>
+          
+            <a href="/tags/脚本操作/" rel="tag"># 脚本操作</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/11/掘金文档编辑器使用方法/" rel="next" title="用掘金－Markdown 编辑器写文章">
+                <i class="fa fa-chevron-left"></i> 用掘金－Markdown 编辑器写文章
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Mark">
+            
+              <p class="site-author-name" itemprop="name">Mark</p>
+              <p class="site-description motion-element" itemprop="description">Personal Technology Blog</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0pTLW1hcms=" title="GitHub &rarr; https://github.com/JS-mark"><i class="fa fa-fw fa-github"></i></span>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="bWFyazpzdW5kdW8zMTk1QHFxLmNvbQ==" title="E-Mail &rarr; mark:sunduo3195@qq.com"><i class="fa fa-fw fa-envelope"></i></span>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一、shell-中特殊变量"><span class="nav-number">2.</span> <span class="nav-text">一、shell 中特殊变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、手工处理参数"><span class="nav-number">3.</span> <span class="nav-text">二、手工处理参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、getopt-处理参数"><span class="nav-number">4.</span> <span class="nav-text">三、getopt 处理参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、getopts-处理参数"><span class="nav-number">5.</span> <span class="nav-text">四、getopts 处理参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、传参意外处理"><span class="nav-number">6.</span> <span class="nav-text">五、传参意外处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考链接："><span class="nav-number">7.</span> <span class="nav-text">参考链接：</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mark</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+  
+    
+    
+      
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1/canvas-nest.min.js"></script>
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+    
+  
+  <script id="ribbon" size="300" alpha="0.6" zindex="-1" src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js"></script>
+
+
+
+  
+
+
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.min.js"></script>
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.ui.min.js"></script>
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.js"></script>
+
+  
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three.min.js"></script>
+
+  
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/canvas_lines.min.js"></script>
+
+  
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1/reading_progress.min.js"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.7.0"></script>
+
+  <script src="/js/src/motion.js?v=6.7.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.7.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.7.0"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/js/src/post-details.js?v=6.7.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+    
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/pangu/3.3.0/pangu.min.js"></script>
+  <script>pangu.spacingPage();</script>
+
+
+  
+  <script src="/js/src/js.cookie.js?v=6.7.0"></script>
+  <script src="/js/src/scroll-cookie.js?v=6.7.0"></script>
+
+
+  
+  <script src="/js/src/exturl.js?v=6.7.0"></script>
+
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
+
+  
+  
+
+  
+  
+
+  
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"log":false});</script></body>
+</html>
