@@ -1267,184 +1267,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://js-mark.com/2018/11/30/eslint-vscode-setting/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark">
-      <meta itemprop="description" content="Personal Technology Blog">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/11/30/eslint-vscode-setting/" class="post-title-link" itemprop="url">eslint-vscode-setting</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-30 00:00:00" itemprop="dateCreated datePublished" datetime="2018-11-30T00:00:00+08:00">2018-11-30</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-01-22 20:19:03" itemprop="dateModified" datetime="2019-01-22T20:19:03+08:00">2019-01-22</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<h2 id="第一步：全局安装-eslint-babel-eslint-eslint-plugin-html-eslint-plugin-react-eslint-plugin-vue"><a href="#第一步：全局安装-eslint-babel-eslint-eslint-plugin-html-eslint-plugin-react-eslint-plugin-vue" class="headerlink" title="第一步：全局安装 eslint,babel-eslint,eslint-plugin-html,eslint-plugin-react,eslint-plugin-vue"></a>第一步：全局安装 eslint,babel-eslint,eslint-plugin-html,eslint-plugin-react,eslint-plugin-vue</h2></blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i eslint babel-eslint eslint-plugin-html eslint-plugin-react eslint-plugin-vue -g</span><br></pre></td></tr></table></figure>
-<blockquote>
-<h2 id="第二步：在任意目录放置-eslintrc-js"><a href="#第二步：在任意目录放置-eslintrc-js" class="headerlink" title="第二步：在任意目录放置.eslintrc.js"></a>第二步：在任意目录放置.eslintrc.js</h2><h2 id="第三步：在-vscode-下载-ESLint-Prettier-Code-formatter-stylus-language-stylus-Vetur"><a href="#第三步：在-vscode-下载-ESLint-Prettier-Code-formatter-stylus-language-stylus-Vetur" class="headerlink" title="第三步：在 vscode 下载 ESLint,Prettier - Code formatter,stylus,language-stylus,Vetur"></a>第三步：在 vscode 下载 ESLint,Prettier - Code formatter,stylus,language-stylus,Vetur</h2><h2 id="第四步：在-vscode-中的配置"><a href="#第四步：在-vscode-中的配置" class="headerlink" title="第四步：在 vscode 中的配置"></a>第四步：在 vscode 中的配置</h2></blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// eslint config start</span></span><br><span class="line"><span class="string">"eslint.autoFixOnSave"</span>: <span class="literal">true</span>,</span><br><span class="line"><span class="string">"eslint.options"</span>: &#123;</span><br><span class="line">	<span class="string">"configFile"</span>: <span class="string">"C:/Users/Mark/.eslint/.eslintrc.js"</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="string">"eslint.validate"</span>: [</span><br><span class="line">	<span class="string">"javascript"</span>,</span><br><span class="line">	<span class="string">"javascriptreact"</span>,</span><br><span class="line">	<span class="string">"html"</span>,</span><br><span class="line">	<span class="string">"vue"</span>,</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="string">"language"</span>: <span class="string">"vue"</span>,</span><br><span class="line">		<span class="string">"autoFix"</span>: <span class="literal">true</span></span><br><span class="line">	&#125;</span><br><span class="line">],</span><br><span class="line"><span class="string">"vetur.format.options.tabSize"</span>: <span class="number">2</span>,</span><br><span class="line"><span class="string">"vetur.format.options.useTabs"</span>: <span class="literal">true</span>,</span><br><span class="line"><span class="string">"vetur.format.defaultFormatterOptions"</span>: &#123;</span><br><span class="line">	<span class="string">"prettier"</span>: &#123;</span><br><span class="line">		<span class="comment">// Prettier option here</span></span><br><span class="line">		<span class="string">"semi"</span>: <span class="literal">false</span>,</span><br><span class="line">		<span class="string">"tabWidth"</span>: <span class="number">2</span>,</span><br><span class="line">		<span class="string">"useTabs"</span>: <span class="literal">true</span>,</span><br><span class="line">		<span class="string">"singleQuote"</span>: <span class="literal">true</span></span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="string">"prettyhtml"</span>: &#123;</span><br><span class="line">		<span class="string">"printWidth"</span>: <span class="number">100</span>, <span class="comment">// No line exceeds 100 characters</span></span><br><span class="line">		<span class="string">"singleQuote"</span>: <span class="literal">false</span> <span class="comment">// Prefer double quotes over single quotes</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;,</span><br><span class="line"><span class="comment">// prettier 格式化配置</span></span><br><span class="line"><span class="string">"prettier.tabWidth"</span>: <span class="number">2</span>,</span><br><span class="line"><span class="string">"prettier.useTabs"</span>: <span class="literal">true</span>,</span><br><span class="line"><span class="string">"prettier.singleQuote"</span>: <span class="literal">true</span>,</span><br><span class="line"><span class="string">"prettier.semi"</span>: <span class="literal">false</span>,</span><br><span class="line"><span class="string">"stylusSupremacy.insertColons"</span>: <span class="literal">false</span>, <span class="comment">// 是否插入冒号</span></span><br><span class="line"><span class="string">"stylusSupremacy.insertSemicolons"</span>: <span class="literal">false</span>, <span class="comment">// 是否插入分好</span></span><br><span class="line"><span class="string">"stylusSupremacy.insertBraces"</span>: <span class="literal">false</span>, <span class="comment">// 是否插入大括号</span></span><br><span class="line"><span class="string">"stylusSupremacy.insertNewLineAroundImports"</span>: <span class="literal">false</span>, <span class="comment">// import之后是否换行</span></span><br><span class="line"><span class="string">"stylusSupremacy.insertNewLineAroundBlocks"</span>: <span class="literal">false</span>,</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://js-mark.com/2018/11/30/DayJs/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1589,6 +1411,184 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> advancedFormat <span class="keyword">from</span> <span class="string">'dayjs/plugin/advancedFormat'</span> <span class="comment">// 按需加载插件</span></span><br><span class="line"></span><br><span class="line">dayjs.extend(advancedFormat) <span class="comment">// 使用插件</span></span><br><span class="line"></span><br><span class="line">dayjs().format(<span class="string">'Q Do k kk X x'</span>) <span class="comment">// 使用扩展后的API</span></span><br></pre></td></tr></table></figure>
 <p>📚<a href="./Plugin.md">插件列表</a></p>
 <h2 id="开源协议"><a href="#开源协议" class="headerlink" title="开源协议"></a>开源协议</h2><p>Day.js 遵循 <a href="../../LICENSE">MIT 开源协议</a>.</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://js-mark.com/2018/11/30/eslint-vscode-setting/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark">
+      <meta itemprop="description" content="Personal Technology Blog">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2018/11/30/eslint-vscode-setting/" class="post-title-link" itemprop="url">eslint-vscode-setting</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-30 00:00:00" itemprop="dateCreated datePublished" datetime="2018-11-30T00:00:00+08:00">2018-11-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-01-22 20:19:03" itemprop="dateModified" datetime="2019-01-22T20:19:03+08:00">2019-01-22</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<h2 id="第一步：全局安装-eslint-babel-eslint-eslint-plugin-html-eslint-plugin-react-eslint-plugin-vue"><a href="#第一步：全局安装-eslint-babel-eslint-eslint-plugin-html-eslint-plugin-react-eslint-plugin-vue" class="headerlink" title="第一步：全局安装 eslint,babel-eslint,eslint-plugin-html,eslint-plugin-react,eslint-plugin-vue"></a>第一步：全局安装 eslint,babel-eslint,eslint-plugin-html,eslint-plugin-react,eslint-plugin-vue</h2></blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i eslint babel-eslint eslint-plugin-html eslint-plugin-react eslint-plugin-vue -g</span><br></pre></td></tr></table></figure>
+<blockquote>
+<h2 id="第二步：在任意目录放置-eslintrc-js"><a href="#第二步：在任意目录放置-eslintrc-js" class="headerlink" title="第二步：在任意目录放置.eslintrc.js"></a>第二步：在任意目录放置.eslintrc.js</h2><h2 id="第三步：在-vscode-下载-ESLint-Prettier-Code-formatter-stylus-language-stylus-Vetur"><a href="#第三步：在-vscode-下载-ESLint-Prettier-Code-formatter-stylus-language-stylus-Vetur" class="headerlink" title="第三步：在 vscode 下载 ESLint,Prettier - Code formatter,stylus,language-stylus,Vetur"></a>第三步：在 vscode 下载 ESLint,Prettier - Code formatter,stylus,language-stylus,Vetur</h2><h2 id="第四步：在-vscode-中的配置"><a href="#第四步：在-vscode-中的配置" class="headerlink" title="第四步：在 vscode 中的配置"></a>第四步：在 vscode 中的配置</h2></blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// eslint config start</span></span><br><span class="line"><span class="string">"eslint.autoFixOnSave"</span>: <span class="literal">true</span>,</span><br><span class="line"><span class="string">"eslint.options"</span>: &#123;</span><br><span class="line">	<span class="string">"configFile"</span>: <span class="string">"C:/Users/Mark/.eslint/.eslintrc.js"</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="string">"eslint.validate"</span>: [</span><br><span class="line">	<span class="string">"javascript"</span>,</span><br><span class="line">	<span class="string">"javascriptreact"</span>,</span><br><span class="line">	<span class="string">"html"</span>,</span><br><span class="line">	<span class="string">"vue"</span>,</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="string">"language"</span>: <span class="string">"vue"</span>,</span><br><span class="line">		<span class="string">"autoFix"</span>: <span class="literal">true</span></span><br><span class="line">	&#125;</span><br><span class="line">],</span><br><span class="line"><span class="string">"vetur.format.options.tabSize"</span>: <span class="number">2</span>,</span><br><span class="line"><span class="string">"vetur.format.options.useTabs"</span>: <span class="literal">true</span>,</span><br><span class="line"><span class="string">"vetur.format.defaultFormatterOptions"</span>: &#123;</span><br><span class="line">	<span class="string">"prettier"</span>: &#123;</span><br><span class="line">		<span class="comment">// Prettier option here</span></span><br><span class="line">		<span class="string">"semi"</span>: <span class="literal">false</span>,</span><br><span class="line">		<span class="string">"tabWidth"</span>: <span class="number">2</span>,</span><br><span class="line">		<span class="string">"useTabs"</span>: <span class="literal">true</span>,</span><br><span class="line">		<span class="string">"singleQuote"</span>: <span class="literal">true</span></span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="string">"prettyhtml"</span>: &#123;</span><br><span class="line">		<span class="string">"printWidth"</span>: <span class="number">100</span>, <span class="comment">// No line exceeds 100 characters</span></span><br><span class="line">		<span class="string">"singleQuote"</span>: <span class="literal">false</span> <span class="comment">// Prefer double quotes over single quotes</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;,</span><br><span class="line"><span class="comment">// prettier 格式化配置</span></span><br><span class="line"><span class="string">"prettier.tabWidth"</span>: <span class="number">2</span>,</span><br><span class="line"><span class="string">"prettier.useTabs"</span>: <span class="literal">true</span>,</span><br><span class="line"><span class="string">"prettier.singleQuote"</span>: <span class="literal">true</span>,</span><br><span class="line"><span class="string">"prettier.semi"</span>: <span class="literal">false</span>,</span><br><span class="line"><span class="string">"stylusSupremacy.insertColons"</span>: <span class="literal">false</span>, <span class="comment">// 是否插入冒号</span></span><br><span class="line"><span class="string">"stylusSupremacy.insertSemicolons"</span>: <span class="literal">false</span>, <span class="comment">// 是否插入分好</span></span><br><span class="line"><span class="string">"stylusSupremacy.insertBraces"</span>: <span class="literal">false</span>, <span class="comment">// 是否插入大括号</span></span><br><span class="line"><span class="string">"stylusSupremacy.insertNewLineAroundImports"</span>: <span class="literal">false</span>, <span class="comment">// import之后是否换行</span></span><br><span class="line"><span class="string">"stylusSupremacy.insertNewLineAroundBlocks"</span>: <span class="literal">false</span>,</span><br></pre></td></tr></table></figure>
 
           
         
