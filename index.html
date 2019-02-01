@@ -265,7 +265,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">19</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">21</span></a>
 
   </li>
         
@@ -284,7 +284,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">5</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">6</span></a>
 
   </li>
         
@@ -303,7 +303,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">11</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">12</span></a>
 
   </li>
         
@@ -377,6 +377,206 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://js-mark.com/2019/01/29/命令行配置代理服务/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark">
+      <meta itemprop="description" content="Personal Technology Blog">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/01/29/命令行配置代理服务/" class="post-title-link" itemprop="url">命令行配置代理服务</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-01-29 09:15:16" itemprop="dateCreated datePublished" datetime="2019-01-29T09:15:16+08:00">2019-01-29</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-02-01 22:31:06" itemprop="dateModified" datetime="2019-02-01T22:31:06+08:00">2019-02-01</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/系统/" itemprop="url" rel="index"><span itemprop="name">系统</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            <div class="post-description">命令行配置代理服务</div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li>因为需要通过命令下载国外资源，但在 IE 配置代理后，对 cmd 却没有效果，于是查了下，有配置 cmd 代理的方法。</li>
+</ul>
+<h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><ul>
+<li>通过设置环境变量来配置代理，一种方式是直接在系统设置中配置（这个就不解释了），另一种方式是在需要时通过 <code>set</code> 命令临时设置。</li>
+<li>控制代理的环境变量分别是 http_proxy、http_proxy_user、http_proxy_pass，不区分大小写，分别代表代理地址（应是 <span class="exturl" data-url="aHR0cDovL2lwOnBvcnQ=" title="http://ip:port">http://ip:port<i class="fa fa-external-link"></i></span> 的形式）、代理用户名、代理密码，一般情况下只需要配置 http_proxy 即可（其余两个参数暂无条件测试，是否有作用未知），参数格式大致如下所示。</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">http_proxy=http://localhost:1080</span><br><span class="line">http_proxy_user=zhangsan</span><br><span class="line">http_proxy_pass=lisi</span><br><span class="line">通过 <span class="built_in">set</span> 命令的形式大致如下所示。</span><br></pre></td></tr></table></figure>
+<h4 id="设置参数"><a href="#设置参数" class="headerlink" title="设置参数"></a>设置参数</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> http_proxy=http://localhost:1080</span><br><span class="line"><span class="built_in">set</span> http_proxy_user=zhangsan</span><br><span class="line"><span class="built_in">set</span> http_proxy_pass=lisi</span><br></pre></td></tr></table></figure>
+<h4 id="删除参数"><a href="#删除参数" class="headerlink" title="删除参数"></a>删除参数</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> http_proxy=</span><br><span class="line"><span class="built_in">set</span> http_proxy_user=</span><br><span class="line"><span class="built_in">set</span> http_proxy_pass=</span><br></pre></td></tr></table></figure>
+<p>另外经测试还有 https_proxy 环境变量可配置，用于配置 https 的代理，如果未配置则将使用 http_proxy 的配置。据此可推测有 https_proxy_user 等参数。</p>
+<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><ul>
+<li>因目前没有环境测试，故以下结论仅根据网上资料整理并推测所得，仅做记录和供参考，详见参考资料。</li>
+<li>据资料得，Linux 配置方式与 Windows 相似，仅命令及配置方式有所不同。</li>
+<li>可配置的环境变量名分别为 http_proxy、https_proxy、ftp_proxy、no_proxy，分别是配置 http 代理、https 代理、ftp 代理、不使用代理的地址，参数格式大致如下所示（正确性有待考察，可能需要加 http:// 前缀），no_proxy 较特殊。</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">http*proxy=192.168.10.91:3128</span><br><span class="line">https_proxy=192.168.10.91:3128</span><br><span class="line">ftp_proxy=192.168.10.91:3128</span><br><span class="line">no_proxy=<span class="string">"127.0.0.1, localhost, 172.26.*, 172.25.6.66, 192.168.\_"</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>在 linux 下也有两种配置方式，一是需要在相关系统文件中配置，二是通过 export 命令临时设置，这里不做详细介绍。</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>Windows 和 Linux 的配置方式大致相同，推测 Windows 也有类似 no_proxy 等的配置，鉴于很少用到，故不做深入研究，需要之时可做尝试。</li>
+</ul>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuZXpsb28uY29tLzIwMDgvMTIvc2V0X2h0dHBfcHJveHkuaHRtbA==" title="https://www.ezloo.com/2008/12/set_http_proxy.html">命令行配置代理服务器<i class="fa fa-external-link"></i></span><br><span class="exturl" data-url="aHR0cDovL3d3dy5meDExNC5uZXQvcWEtMTUtMTUzODY3LmFzcHg=" title="http://www.fx114.net/qa-15-153867.aspx">为 windows cmd 设置代理<i class="fa fa-external-link"></i></span><br><span class="exturl" data-url="aHR0cDovL2x5bXJnLmJsb2cuNTFjdG8uY29tLzE1NTEzMjcvNDI1NzQ0" title="http://lymrg.blog.51cto.com/1551327/425744">linux 命令行模式下实现代理上网<i class="fa fa-external-link"></i></span><br><span class="exturl" data-url="aHR0cDovL3d3dy5saW51eGRpeWYuY29tL2xpbnV4LzE0MTkxLmh0bWw=" title="http://www.linuxdiyf.com/linux/14191.html">Ubuntu 设置代理和例外<i class="fa fa-external-link"></i></span></p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -509,24 +709,35 @@
       
         
           
-            <p>
-              前言
-为什么学习脚本编写???
-你有没有遇到过这样场景，繁杂并且重复的操作 N 多件~~~
-那么这个时候我们是不是可以想一些其他更快捷、更方便的方法呢！（答案是肯定的，肯定有撒因为我们人类可是很懒的高级哺乳动物）好了！那么我们步入今天的正题！
+            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><ul>
+<li>为什么学习脚本编写???</li>
+<li>你有没有遇到过这样场景，繁杂并且重复的操作 N 多件~~~</li>
+<li>那么这个时候我们是不是可以想一些其他更快捷、更方便的方法呢！（答案是肯定的，肯定有撒因为我们人类可是很懒的高级哺乳动物）<br><img src="/assets/img/2018/12/20150424040700733.jpg" alt="image"><br>好了！那么我们步入今天的正题！</li>
+</ul>
+<h3 id="一、shell-中特殊变量"><a href="#一、shell-中特殊变量" class="headerlink" title="一、shell 中特殊变量"></a>一、shell 中特殊变量</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$0</span>    <span class="comment"># 当前脚本的文件名（间接运行时还包括绝对路径）。</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$n</span>    <span class="comment"># 传递给脚本或函数的参数。n 是一个数字，表示第几个参数。例如，第一个参数是 $1 。</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$#</span>    <span class="comment"># 传递给脚本或函数的参数个数。</span></span><br><span class="line"><span class="built_in">echo</span> $*    <span class="comment"># 传递给脚本或函数的所有参数。</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$@</span>    <span class="comment"># 传递给脚本或函数的所有参数。被双引号 (" ") 包含时，与 $* 不同，下面将会讲到。</span></span><br><span class="line"><span class="built_in">echo</span> $?    <span class="comment"># 上个命令的退出状态，或函数的返回值。</span></span><br><span class="line"><span class="built_in">echo</span> $$    <span class="comment"># 当前 Shell 进程 ID。对于 Shell 脚本，就是这些脚本所在的进程 ID。</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$_</span>    <span class="comment"># 上一个命令的最后一个参数</span></span><br><span class="line"><span class="built_in">echo</span> $!    <span class="comment"># 后台运行的最后一个进程的 ID 号</span></span><br></pre></td></tr></table></figure>
+<p>示例：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 现在保存为一个test.sh脚本，然后加上几个参数运行：</span></span><br><span class="line">$ ./test.sh <span class="built_in">test</span> test1 test2 test3 test4</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line">./test.sh                      <span class="comment"># $0</span></span><br><span class="line">                               <span class="comment"># $n</span></span><br><span class="line">5                              <span class="comment"># $#</span></span><br><span class="line"><span class="built_in">test</span> test1 test2 test3 test4   <span class="comment"># $*</span></span><br><span class="line"><span class="built_in">test</span> test1 test2 test3 test4   <span class="comment"># $@</span></span><br><span class="line">0                              <span class="comment"># $?</span></span><br><span class="line">12305                          <span class="comment"># $$</span></span><br><span class="line">12305                          <span class="comment"># $_</span></span><br><span class="line">                               <span class="comment"># $!</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>&emsp;$<em> 和 $@ 都表示传递给函数或脚本的所有参数，不被双引号 (“”) 包含时，都以”$1””$2” … “$n” 的形式输出所有参数。<br> &emsp;但是当它们被双引号 (“”) 包含时，”$</em>“会将所有的参数作为一个整体，以”$1 $2 … $n”的形式输出所有参数；”$@”会将各个参数分开，以”$1””$2” … “$n” 的形式输出所有参数。</p>
+</blockquote>
+<p>例如：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"\$*="</span> $*</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"\"\$*\"="</span> <span class="string">"$*"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"\$@="</span> <span class="variable">$@</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"\"\$@\"="</span> <span class="string">"<span class="variable">$@</span>"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"print each param from \$*"</span></span><br><span class="line"><span class="keyword">for</span> var <span class="keyword">in</span> $*</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"<span class="variable">$var</span>"</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"print each param from \$@"</span></span><br><span class="line"><span class="keyword">for</span> var <span class="keyword">in</span> <span class="variable">$@</span></span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"<span class="variable">$var</span>"</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"从 \"\$*\" 获取并打印每一个参数"</span></span><br><span class="line"><span class="keyword">for</span> var <span class="keyword">in</span> <span class="string">"$*"</span></span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"<span class="variable">$var</span>"</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"从 \"\$@\" 获取并打印每一个参数"</span></span><br><span class="line"><span class="keyword">for</span> var <span class="keyword">in</span> <span class="string">"<span class="variable">$@</span>"</span></span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"<span class="variable">$var</span>"</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure></p>
+<p>返回结果： </p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$*= <span class="built_in">test</span> test1 test2</span><br><span class="line"><span class="string">"$*"</span>= <span class="built_in">test</span> test1 test2</span><br><span class="line"><span class="variable">$@</span>= <span class="built_in">test</span> test1 test2</span><br><span class="line"><span class="string">"<span class="variable">$@</span>"</span>= <span class="built_in">test</span> test1 test2</span><br><span class="line"><span class="built_in">print</span> each param from $*</span><br><span class="line"><span class="built_in">test</span></span><br><span class="line">test1</span><br><span class="line">test2</span><br><span class="line"><span class="built_in">print</span> each param from <span class="variable">$@</span></span><br><span class="line"><span class="built_in">test</span></span><br><span class="line">test1</span><br><span class="line">test2</span><br><span class="line">从 <span class="string">"$*"</span> 获取并打印每一个参数</span><br><span class="line"><span class="built_in">test</span> test1 test2</span><br><span class="line">从 <span class="string">"<span class="variable">$@</span>"</span> 获取并打印每一个参数</span><br><span class="line"><span class="built_in">test</span></span><br><span class="line">test1</span><br><span class="line">test2</span><br></pre></td></tr></table></figure>
+<h3 id="二、手工处理参数"><a href="#二、手工处理参数" class="headerlink" title="二、手工处理参数"></a>二、手工处理参数</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> [ -n <span class="string">"<span class="variable">$1</span>"</span> ]  </span><br><span class="line"><span class="keyword">do</span>  </span><br><span class="line">  <span class="keyword">case</span> <span class="string">"<span class="variable">$1</span>"</span> <span class="keyword">in</span>   </span><br><span class="line">    -a)  </span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"发现 -a 选项"</span>  </span><br><span class="line">        ;;  </span><br><span class="line">    -b)  </span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"发现 -b 选项"</span>  </span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"-b 选项的参数值是：<span class="variable">$2</span>"</span>   </span><br><span class="line">        <span class="built_in">shift</span>  </span><br><span class="line">        ;;  </span><br><span class="line">    -c)  </span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"发现 -c 选项"</span>  </span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"-c 选项的参数值是：<span class="variable">$2</span>"</span>  </span><br><span class="line">        <span class="built_in">shift</span>  </span><br><span class="line">        ;;  </span><br><span class="line">    -d)  </span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"发现 -d 选项"</span>  </span><br><span class="line">        ;;  </span><br><span class="line">    *)  </span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"<span class="variable">$1</span> is not an option"</span>  </span><br><span class="line">        ;;  </span><br><span class="line">  <span class="keyword">esac</span>  </span><br><span class="line">  <span class="built_in">shift</span>  </span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行：./test.sh -a -b t2 -c t3 -d</span></span><br><span class="line"><span class="comment"># 返回结果</span></span><br><span class="line">发现 -a 选项</span><br><span class="line">发现 -b 选项</span><br><span class="line">-b 选项的参数值是：t2</span><br><span class="line">发现 -c 选项</span><br><span class="line">-c 选项的参数值是：t3</span><br><span class="line">发现 -d 选项</span><br></pre></td></tr></table></figure>
+<h3 id="三、getopt-处理参数"><a href="#三、getopt-处理参数" class="headerlink" title="三、getopt 处理参数"></a>三、getopt 处理参数</h3><p>下面 getopt ab:c:d “$@” 中的 abcd 分别代表四个选项，后面带有冒号的表示选项需要参数值。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">GETOPTOUT=`getopt ab:c:d <span class="string">"<span class="variable">$@</span>"</span>`</span><br><span class="line">  <span class="built_in">set</span> -- <span class="variable">$GETOPTOUT</span></span><br><span class="line">  <span class="keyword">while</span> [ -n <span class="string">"<span class="variable">$1</span>"</span> ]</span><br><span class="line">  <span class="keyword">do</span>  </span><br><span class="line">  <span class="keyword">case</span> <span class="variable">$1</span> <span class="keyword">in</span></span><br><span class="line">    -a)  </span><br><span class="line">      <span class="built_in">echo</span> <span class="string">"发现 -a 选项"</span></span><br><span class="line">      ;;  </span><br><span class="line">    -b)  </span><br><span class="line">      <span class="built_in">echo</span> <span class="string">"发现 -b 选项"</span></span><br><span class="line">      <span class="built_in">echo</span> <span class="string">"-b 选项的参数值是：<span class="variable">$2</span>"</span></span><br><span class="line">      <span class="built_in">shift</span>  </span><br><span class="line">      ;;  </span><br><span class="line">    -c)  </span><br><span class="line">      <span class="built_in">echo</span> <span class="string">"发现 -c 选项"</span></span><br><span class="line">      <span class="built_in">echo</span> <span class="string">"-c 选项的参数值是：<span class="variable">$2</span>"</span></span><br><span class="line">      <span class="built_in">shift</span>  </span><br><span class="line">      ;;  </span><br><span class="line">    -d)  </span><br><span class="line">      <span class="built_in">echo</span> <span class="string">"发现 -d 选项"</span></span><br><span class="line">      ;;  </span><br><span class="line">    --)  </span><br><span class="line">      <span class="built_in">shift</span>  </span><br><span class="line">      <span class="built_in">break</span>  </span><br><span class="line">      ;;  </span><br><span class="line">    *)  </span><br><span class="line">      <span class="built_in">echo</span> <span class="string">"未知选项:"</span><span class="variable">$1</span><span class="string">""</span>  </span><br><span class="line">      ;;  </span><br><span class="line">  <span class="keyword">esac</span>  </span><br><span class="line">  <span class="built_in">shift</span>  </span><br><span class="line">  <span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行</span></span><br><span class="line"> ./proxychains4.sh -a -b t2 -c t3 -d</span><br><span class="line"><span class="comment"># 返回</span></span><br><span class="line">发现 -a 选项</span><br><span class="line">发现 -b 选项</span><br><span class="line">-b 选项的参数值是：t2</span><br><span class="line">发现 -c 选项</span><br><span class="line">-c 选项的参数值是：t3</span><br><span class="line">发现 -d 选项</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">ARGV=($(getopt -o 短选项1[:]短选项2[:]...[:]短选项n -l 长选项1,长选项2,...,长选项n -- <span class="string">"<span class="variable">$@</span>"</span>))</span><br><span class="line"><span class="built_in">eval</span> <span class="built_in">set</span> -- <span class="string">"<span class="variable">$ARGV</span>"</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">true</span></span><br><span class="line"><span class="keyword">do</span></span><br><span class="line"><span class="keyword">case</span> <span class="string">"<span class="variable">$1</span>"</span> <span class="keyword">in</span></span><br><span class="line">  -短选项1|--长选项1)</span><br><span class="line">    process</span><br><span class="line">    <span class="built_in">shift</span></span><br><span class="line">    ;;</span><br><span class="line">  -短选项2|--长选项2)</span><br><span class="line">    <span class="comment"># 获取选项</span></span><br><span class="line">    opt = <span class="variable">$2</span></span><br><span class="line">    process</span><br><span class="line">    <span class="built_in">shift</span> 2</span><br><span class="line">    ;;</span><br><span class="line"></span><br><span class="line">  ... ...</span><br><span class="line"></span><br><span class="line">  -短选项3|--长选项3)</span><br><span class="line">    process</span><br><span class="line">    ;;</span><br><span class="line">  --)</span><br><span class="line">    <span class="built_in">break</span></span><br><span class="line">    ;;</span><br><span class="line"><span class="keyword">esac</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>关于 eval 这个命令，用一个小例子解释：</p>
+</blockquote>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">foo=10</span><br><span class="line">x=foo</span><br><span class="line">y=<span class="string">'$'</span><span class="variable">$x</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$y</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$foo</span></span><br><span class="line"><span class="built_in">eval</span> y=<span class="string">'$'</span><span class="variable">$x</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$y</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回</span></span><br><span class="line"><span class="variable">$foo</span></span><br><span class="line">10</span><br><span class="line">10</span><br><span class="line"></span><br><span class="line"><span class="comment"># 因为我一般用这个命令连接构建命令参数，所以你可以简单理解为执行两次（虽然不太对）。通过添加 eval 可以把参数解析后再执行。</span></span><br></pre></td></tr></table></figure>
+<h3 id="四、getopts-处理参数"><a href="#四、getopts-处理参数" class="headerlink" title="四、getopts 处理参数"></a>四、getopts 处理参数</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="built_in">getopts</span> :ab:c:d ARGS  </span><br><span class="line"><span class="keyword">do</span>  </span><br><span class="line"><span class="keyword">case</span> <span class="variable">$ARGS</span> <span class="keyword">in</span>   </span><br><span class="line">  a)  </span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"发现 -a 选项"</span>  </span><br><span class="line">    ;;  </span><br><span class="line">  b)  </span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"发现 -b 选项"</span>  </span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"-b 选项的值是：<span class="variable">$OPTARG</span>"</span>  </span><br><span class="line">    ;;  </span><br><span class="line">  c)  </span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"发现 -c 选项"</span>  </span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"-c 选项的值是：<span class="variable">$OPTARG</span>"</span>  </span><br><span class="line">    ;;  </span><br><span class="line">  d)  </span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"发现 -d 参数"</span>  </span><br><span class="line">    ;;  </span><br><span class="line">  *)  </span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"未知选项：<span class="variable">$ARGS</span>"</span></span><br><span class="line">    ;;</span><br><span class="line"><span class="keyword">esac</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<p>这种方法最方便简单。接下来基于这种方法深入讲解。</p>
+<h3 id="五、传参意外处理"><a href="#五、传参意外处理" class="headerlink" title="五、传参意外处理"></a>五、传参意外处理</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"?"</span>)</span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"未知选项 <span class="variable">$OPTARG</span>"</span></span><br><span class="line">  ;;</span><br><span class="line"><span class="string">":"</span>)</span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"没有输入任何选项 <span class="variable">$OPTARG</span>"</span></span><br><span class="line">  ;;</span><br><span class="line">*)</span><br><span class="line">  <span class="comment"># 发生不能预料的错误时。</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"处理选项时出现未知错误"</span></span><br><span class="line">  ;;</span><br></pre></td></tr></table></figure>
+<h3 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h3><blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC9kM2NkMzZjOTdhYmM=" title="https://www.jianshu.com/p/d3cd36c97abc">Shell 脚本传参方法总结<i class="fa fa-external-link"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly93d3cuaWJtLmNvbS9kZXZlbG9wZXJ3b3Jrcy9jbi9saW51eC9sLWJhc2gtcGFyYW1ldGVycy5odG1s" title="https://www.ibm.com/developerworks/cn/linux/l-bash-parameters.html">Bash 参数和参数扩展<i class="fa fa-external-link"></i></span><br><span class="exturl" data-url="aHR0cDovL3d3dy4zNjF3YXkuY29tL3NoZWxsLWdldG9wdC80OTgxLmh0bWw=" title="http://www.361way.com/shell-getopt/4981.html">shell中的getopt与getopts<i class="fa fa-external-link"></i></span></p>
+</blockquote>
 
-一、shell 中特殊变量#!/bin/bashech
-              ...
-            </p>
-          <!--noindex-->
           
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/12/24/shell脚本学习/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
         
       
     </div>
@@ -697,20 +908,115 @@
       
         
           
-            <p>
-              用掘金－Markdown 编辑器写文章欢迎使用 掘金－Markdown 编辑器撰写技术文章，只专注于内容和技术，不再费心排版的问题。这是一份简要的 Markdown 引导指南，希望可以帮助您顺利的开始使用 Markdown 编辑器。
-丰富的快捷键本 Markdown 编辑器支持丰富的格式快捷键，可以
-              ...
-            </p>
-          <!--noindex-->
+            <h3 id="用掘金－Markdown-编辑器写文章"><a href="#用掘金－Markdown-编辑器写文章" class="headerlink" title="用掘金－Markdown 编辑器写文章"></a>用掘金－Markdown 编辑器写文章</h3><p>欢迎使用 掘金－Markdown 编辑器撰写技术文章，只专注于内容和技术，不再费心排版的问题。这是一份简要的 Markdown 引导指南，希望可以帮助您顺利的开始使用 Markdown 编辑器。</p>
+<h3 id="丰富的快捷键"><a href="#丰富的快捷键" class="headerlink" title="丰富的快捷键"></a>丰富的快捷键</h3><p>本 Markdown 编辑器支持丰富的格式快捷键，可以非常便捷、轻松的使用 Markdown 语言，形成优美的排版和内容格式。</p>
+<p>支持的快捷键有：</p>
+<ul>
+<li>加粗： <code>Ctrl/Cmd + B</code></li>
+<li>标题： <code>Ctrl/Cmd + H</code></li>
+<li>插入链接： <code>Ctrl/Cmd + K</code></li>
+<li>插入代码： <code>Ctrl/Cmd + Shift + C</code></li>
+<li>行内代码： <code>Ctrl/Cmd + Shift + K</code></li>
+<li>插入图片： <code>Ctrl/Cmd + Shift + I</code></li>
+<li>无序列表： <code>Ctrl/Cmd + Shift + L</code></li>
+<li>撤销： <code>Ctrl/Cmd + Z</code></li>
+</ul>
+<h3 id="常用语法"><a href="#常用语法" class="headerlink" title="常用语法"></a>常用语法</h3><h4 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h4><blockquote>
+<p>语法格式：<strong> ‘#’+’空格’+’文本’ </strong></p>
+</blockquote>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h4 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h4><blockquote>
+<p>无序列表语法格式：<strong> ‘-‘ + ‘空格’ ＋ ‘文本’ </strong></p>
+</blockquote>
+<ul>
+<li>文本一</li>
+<li>文本二</li>
+<li>文本三</li>
+</ul>
+<blockquote>
+<p>有序列表语法格式：<strong> ‘数字’ + ‘.’ + ‘空格’ + ‘文本’ </strong></p>
+</blockquote>
+<ol>
+<li>文本一</li>
+<li>文本二</li>
+<li>文本三</li>
+</ol>
+<blockquote>
+<p>任务列表语法格式：<strong> ‘-‘ + ‘空格’ + ‘[ ]’ + ‘文本’ </strong></p>
+</blockquote>
+<ul>
+<li style="list-style: none"><input type="checkbox" checked> 文本一</li>
+<li style="list-style: none"><input type="checkbox"> 文本二</li>
+<li style="list-style: none"><input type="checkbox"> 文本三</li>
+</ul>
+<h4 id="链接和图片"><a href="#链接和图片" class="headerlink" title="链接和图片"></a>链接和图片</h4><p>在 Markdown 中插入链接不需要其他按钮，你只需要使用<code>［显示文本］(链接地址)</code>这样的格式语法即可。例如：<br><span class="exturl" data-url="aHR0cHM6Ly9nb2xkLnhpdHUuaW8=" title="https://gold.xitu.io">稀土掘金<i class="fa fa-external-link"></i></span><br>插入图片的语法与插入链接的语法很像，只是前面多了一个 <code>!</code>.语法如下：<br><code>![图片的标注](图片链接地址)</code></p>
+<h4 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h4><blockquote>
+<p>语法：<strong> ‘&gt;’+’空格’+’文本’ </strong></p>
+</blockquote>
+<p>例如：</p>
+<blockquote>
+<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的 HTML 页面。</p>
+</blockquote>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><p>如下是代码段的语法：</p>
+<pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是代码段</span><br></pre></td></tr></table></figure>
+
+</pre>
+
+<p>例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bubbleSort</span><span class="params">(alist)</span>:</span></span><br><span class="line"> <span class="keyword">for</span> passnum <span class="keyword">in</span> range(len(alist)<span class="number">-1</span>,<span class="number">0</span>,<span class="number">-1</span>):</span><br><span class="line"> <span class="comment">#print alist,passnum</span></span><br><span class="line"> <span class="keyword">for</span> i <span class="keyword">in</span> range(passnum):</span><br><span class="line"> <span class="keyword">if</span> alist[i]&gt;alist[i+<span class="number">1</span>]:</span><br><span class="line"> temp = alist[i]</span><br><span class="line"> alist[i] = alist[i+<span class="number">1</span>]</span><br><span class="line"> alist[i+<span class="number">1</span>] = temp</span><br><span class="line"> <span class="keyword">return</span> alist</span><br></pre></td></tr></table></figure>
+<h4 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h4><p><strong>Markdown 　 Extra</strong>　表格语法：</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>价格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iPhone</td>
+<td>\$560</td>
+</tr>
+<tr>
+<td>iPad</td>
+<td>\$780</td>
+</tr>
+<tr>
+<td>iMac</td>
+<td>\$1000</td>
+</tr>
+</tbody>
+</table>
+<p>可以使用冒号来定义对齐方式：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">项目</th>
+<th style="text-align:right">价格</th>
+<th style="text-align:center">数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">iPhone</td>
+<td style="text-align:right">6000 元</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td style="text-align:left">iPad</td>
+<td style="text-align:right">3800 元</td>
+<td style="text-align:center">12</td>
+</tr>
+<tr>
+<td style="text-align:left">iMac</td>
+<td style="text-align:right">10000 元</td>
+<td style="text-align:center">234</td>
+</tr>
+</tbody>
+</table>
+<h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p>以上是最常见的 Markdown 的语法和格式，如果你还希望深入的学习 Markdown，可以参考这里<span class="exturl" data-url="aHR0cHM6Ly93d3cuYXBwaW5uLmNvbS9tYXJrZG93bi8=" title="https://www.appinn.com/markdown/">Markdown 语法<i class="fa fa-external-link"></i></span>，非常感谢使用<strong> 掘金－Markdown 编辑器</strong>,希望为您提供舒适的写作体验。</p>
+
           
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/12/11/掘金文档编辑器使用方法/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
         
       
     </div>
@@ -881,22 +1187,32 @@
       
         
           
-            <p>
-              
+            <p align="center"><a href="#" target="_blank" rel="noopener noreferrer"><br><img width="200" height="200" src="https://cn.vuejs.org/images/logo.png" alt="Vue"></a></p>
 
+<blockquote>
+<h3 id="初探-Vue3-0-新特性"><a href="#初探-Vue3-0-新特性" class="headerlink" title="初探 Vue3.0 新特性"></a>初探 Vue3.0 新特性</h3><p>&emsp;“ 我已经学不动了，只有神可以挽救一下我的膝盖—-” 自 2016 年 10 月 1 日 Vue2.0 版本发布以来到目前为止已经将近快两年的时间了。在这两年里，前端领域风云变化，各种框架层出不穷。小程序横空出世，angular 已经迭代到 angular6,从 angular2 开始已经基本上是将 angularjs 推倒重来，蜕变升级。等等。。。在这两年里，我们看到了太多的框架出现和消失，前端框架基本上是 vue react angular 三足鼎立。感谢各位开源大大，是你们推动了整个前端领域的快速发展。<br>&emsp;与此同时，面对一时间涌现的那么多种前端框架，很多小伙伴们都会感觉力不从心，甚至还出现了众多用户到某知名开源项目上留言：“求求你别写了，我们学不动了~~”<br>&emsp;今天，Vue 的主要开发者尤小右在微博上透露了 Vue3.0 的开发计划，快来看看有哪些新改变吧。</p>
+</blockquote>
+<p><img src="/assets/img/2018/12/vue3.0.png" alt="image"></p>
+<blockquote>
+<h3 id="9月30日，尤雨溪在medium个人博客上发布了vue3-0的开发思路，国内有翻译的版本，见文章最后的参考链接。3-0带来了很大的变化，他讲了一些改进的思路以及整个开发流程的规划。"><a href="#9月30日，尤雨溪在medium个人博客上发布了vue3-0的开发思路，国内有翻译的版本，见文章最后的参考链接。3-0带来了很大的变化，他讲了一些改进的思路以及整个开发流程的规划。" class="headerlink" title="9月30日，尤雨溪在medium个人博客上发布了vue3.0的开发思路，国内有翻译的版本，见文章最后的参考链接。3.0带来了很大的变化，他讲了一些改进的思路以及整个开发流程的规划。"></a>9月30日，尤雨溪在medium个人博客上发布了vue3.0的开发思路，国内有翻译的版本，见文章最后的参考链接。3.0带来了很大的变化，他讲了一些改进的思路以及整个开发流程的规划。</h3><p>1.Virtual DOM 完全重写，mounting &amp; patching 提速  100% ;<br>2.更多编译时（compile-time）提醒以减少 runtime 开销;<br>3.基于 Proxy 观察者机制以满足全语言覆盖及更好的性能;<br>4.放弃 Object.defineProperty ，使用更快的原生 Proxy;<br>5.组件实例初始化速度提高 100％;<br>6.提速一倍/内存使用降低一半。</p>
+</blockquote>
+<blockquote>
+<h3 id="对于-3-0-的-proxy-特性有必要讲一讲"><a href="#对于-3-0-的-proxy-特性有必要讲一讲" class="headerlink" title="对于 3.0 的 proxy 特性有必要讲一讲"></a>对于 3.0 的 proxy 特性有必要讲一讲</h3><p>对于这个观察者机制的变更，给我带来的好处简直不言而喻。（我们终于不再担心目前官网上提的那个检测数组/检测对象变更了）</p>
+</blockquote>
+<p>&emsp;不久前，也就是11月14日-16日于多伦多举办的 VueConf TO 2018 大会上，尤雨溪发表了名为 Vue3.0 Updates 的主题演讲，对 Vue3.0 的更新计划、方向进行了详细阐述（感兴趣的小伙伴可以看看完整的 <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmdvb2ds5Yid5o6iIFZ1ZTMuMCDmlrDnibnmgKdlLmNvbS9wcmVzZW50YXRpb24vZC8xeWhQR3loUXJKY3BKSTJaRnZCbWUzcEdLYUdOaUxpNzA5YzM3c3ZpdnYwby9lZGl0P3VzcD1zaGFyaW5n" title="https://docs.googl初探 Vue3.0 新特性e.com/presentation/d/1yhPGyhQrJcpJI2ZFvBme3pGKaGNiLi709c37svivv0o/edit?usp=sharing">PPT<i class="fa fa-external-link"></i></span>），表示已经放弃使用了 Object.defineProperty，而选择了使用更快的原生 Proxy !!<br>&emsp;这将会消除了之前 Vue2.x 中基于 Object.defineProperty 的实现所存在的很多限制：无法监听 属性的添加和删除、数组索引和长度的变更，并可以支持 Map、Set、WeakMap 和 WeakSet！</p>
+<p><img src="/assets/img/2018/12/1.png" alt="image"><br><img src="/assets/img/2018/12/2.png" alt="image"></p>
+<blockquote>
+<p>### </p>
+</blockquote>
+<p>最后期待，2019年的VUE3.0的发布，来让前端开发更便捷，更cool！<br>参考文献：</p>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uaW0vcG9zdC81YmZjYmFiMDUxODgyNTc0MWU3YmQ2N2Y=" title="https://juejin.im/post/5bfcbab0518825741e7bd67f">初探 Vue3.0 中的一大亮点——Proxy !<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvazZPaE1OcnBhZ3RUbWJoa1ctdG1aZw==" title="https://mp.weixin.qq.com/s/k6OhMNrpagtTmbhkW-tmZg">重磅！尤雨溪发布Vue 3.0开发路线<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vcHJlc2VudGF0aW9uL2QvMXloUEd5aFFySmNwSkkyWkZ2Qm1lM3BHS2FHTmlMaTcwOWMzN3N2aXZ2MG8vZWRpdD91c3A9c2hhcmluZw==" title="https://docs.google.com/presentation/d/1yhPGyhQrJcpJI2ZFvBme3pGKaGNiLi709c37svivv0o/edit?usp=sharing">尤大大的PPT(需要翻墙下载)<i class="fa fa-external-link"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvSmF2YVNjcmlwdC9SZWZlcmVuY2UvR2xvYmFsX09iamVjdHMvUHJveHk=" title="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy">Proxy MDN<i class="fa fa-external-link"></i></span></li>
+</ul>
 
-初探 Vue3.0 新特性&emsp;“ 我已经学不动了，只有神可以挽救一下我的膝盖—-” 自 2016 年 10 月 1 日 Vue2.0 版本发布以来到目前为止已经将近快两年的时间了。在这两年里，前端领域风云变化，各种框架层出不穷。小程序横空出世，angular 已经迭代到 angular
-              ...
-            </p>
-          <!--noindex-->
           
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/12/10/Vue3.0/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
         
       
     </div>
@@ -1067,21 +1383,14 @@
       
         
           
-            <p>
-              
-第一步：全局安装 eslint,babel-eslint,eslint-plugin-html,eslint-plugin-react,eslint-plugin-vue
-npm i eslint babel-eslint eslint-plugin-html eslint-plugin-reac
-              ...
-            </p>
-          <!--noindex-->
+            <blockquote>
+<h2 id="第一步：全局安装-eslint-babel-eslint-eslint-plugin-html-eslint-plugin-react-eslint-plugin-vue"><a href="#第一步：全局安装-eslint-babel-eslint-eslint-plugin-html-eslint-plugin-react-eslint-plugin-vue" class="headerlink" title="第一步：全局安装 eslint,babel-eslint,eslint-plugin-html,eslint-plugin-react,eslint-plugin-vue"></a>第一步：全局安装 eslint,babel-eslint,eslint-plugin-html,eslint-plugin-react,eslint-plugin-vue</h2></blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i eslint babel-eslint eslint-plugin-html eslint-plugin-react eslint-plugin-vue -g</span><br></pre></td></tr></table></figure>
+<blockquote>
+<h2 id="第二步：在任意目录放置-eslintrc-js"><a href="#第二步：在任意目录放置-eslintrc-js" class="headerlink" title="第二步：在任意目录放置.eslintrc.js"></a>第二步：在任意目录放置.eslintrc.js</h2><h2 id="第三步：在-vscode-下载-ESLint-Prettier-Code-formatter-stylus-language-stylus-Vetur"><a href="#第三步：在-vscode-下载-ESLint-Prettier-Code-formatter-stylus-language-stylus-Vetur" class="headerlink" title="第三步：在 vscode 下载 ESLint,Prettier - Code formatter,stylus,language-stylus,Vetur"></a>第三步：在 vscode 下载 ESLint,Prettier - Code formatter,stylus,language-stylus,Vetur</h2><h2 id="第四步：在-vscode-中的配置"><a href="#第四步：在-vscode-中的配置" class="headerlink" title="第四步：在 vscode 中的配置"></a>第四步：在 vscode 中的配置</h2></blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// eslint config start</span></span><br><span class="line"><span class="string">"eslint.autoFixOnSave"</span>: <span class="literal">true</span>,</span><br><span class="line"><span class="string">"eslint.options"</span>: &#123;</span><br><span class="line">	<span class="string">"configFile"</span>: <span class="string">"C:/Users/Mark/.eslint/.eslintrc.js"</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="string">"eslint.validate"</span>: [</span><br><span class="line">	<span class="string">"javascript"</span>,</span><br><span class="line">	<span class="string">"javascriptreact"</span>,</span><br><span class="line">	<span class="string">"html"</span>,</span><br><span class="line">	<span class="string">"vue"</span>,</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="string">"language"</span>: <span class="string">"vue"</span>,</span><br><span class="line">		<span class="string">"autoFix"</span>: <span class="literal">true</span></span><br><span class="line">	&#125;</span><br><span class="line">],</span><br><span class="line"><span class="string">"vetur.format.options.tabSize"</span>: <span class="number">2</span>,</span><br><span class="line"><span class="string">"vetur.format.options.useTabs"</span>: <span class="literal">true</span>,</span><br><span class="line"><span class="string">"vetur.format.defaultFormatterOptions"</span>: &#123;</span><br><span class="line">	<span class="string">"prettier"</span>: &#123;</span><br><span class="line">		<span class="comment">// Prettier option here</span></span><br><span class="line">		<span class="string">"semi"</span>: <span class="literal">false</span>,</span><br><span class="line">		<span class="string">"tabWidth"</span>: <span class="number">2</span>,</span><br><span class="line">		<span class="string">"useTabs"</span>: <span class="literal">true</span>,</span><br><span class="line">		<span class="string">"singleQuote"</span>: <span class="literal">true</span></span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="string">"prettyhtml"</span>: &#123;</span><br><span class="line">		<span class="string">"printWidth"</span>: <span class="number">100</span>, <span class="comment">// No line exceeds 100 characters</span></span><br><span class="line">		<span class="string">"singleQuote"</span>: <span class="literal">false</span> <span class="comment">// Prefer double quotes over single quotes</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;,</span><br><span class="line"><span class="comment">// prettier 格式化配置</span></span><br><span class="line"><span class="string">"prettier.tabWidth"</span>: <span class="number">2</span>,</span><br><span class="line"><span class="string">"prettier.useTabs"</span>: <span class="literal">true</span>,</span><br><span class="line"><span class="string">"prettier.singleQuote"</span>: <span class="literal">true</span>,</span><br><span class="line"><span class="string">"prettier.semi"</span>: <span class="literal">false</span>,</span><br><span class="line"><span class="string">"stylusSupremacy.insertColons"</span>: <span class="literal">false</span>, <span class="comment">// 是否插入冒号</span></span><br><span class="line"><span class="string">"stylusSupremacy.insertSemicolons"</span>: <span class="literal">false</span>, <span class="comment">// 是否插入分好</span></span><br><span class="line"><span class="string">"stylusSupremacy.insertBraces"</span>: <span class="literal">false</span>, <span class="comment">// 是否插入大括号</span></span><br><span class="line"><span class="string">"stylusSupremacy.insertNewLineAroundImports"</span>: <span class="literal">false</span>, <span class="comment">// import之后是否换行</span></span><br><span class="line"><span class="string">"stylusSupremacy.insertNewLineAroundBlocks"</span>: <span class="literal">false</span>,</span><br></pre></td></tr></table></figure>
+
           
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/11/30/eslint-vscode-setting/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
         
       
     </div>
@@ -1252,22 +1561,36 @@ npm i eslint babel-eslint eslint-plugin-html eslint-plugin-reac
       
         
           
-            <p>
-              Moment.js 的 2kB 轻量化方案，拥有同样强大的 API                                        
+            <p align="center"><a href="#" target="_blank" rel="noopener noreferrer"><img width="550" src="https://user-images.githubusercontent.com/17680888/39081119-3057bbe2-456e-11e8-862c-646133ad4b43.png" alt="Day.js"></a></p><br><p align="center">Moment.js 的 <b>2kB</b> 轻量化方案，拥有同样强大的 API</p><br><br><br><p align="center"><br>    <span class="exturl" data-url="aHR0cHM6Ly91bnBrZy5jb20vZGF5anMvZGF5anMubWluLmpz" title="https://unpkg.com/dayjs/dayjs.min.js"><img src="http://img.badgesize.io/https://unpkg.com/dayjs/dayjs.min.js?compression=gzip&style=flat-square" alt="Gzip Size"><i class="fa fa-external-link"></i></span><br>    <span class="exturl" data-url="aHR0cHM6Ly93d3cubnBtanMuY29tL3BhY2thZ2UvZGF5anM=" title="https://www.npmjs.com/package/dayjs"><img src="https://img.shields.io/npm/v/dayjs.svg?style=flat-square" alt="NPM Version"><i class="fa fa-external-link"></i></span><br>    <span class="exturl" data-url="aHR0cHM6Ly90cmF2aXMtY2kub3JnL2lhbWt1bi9kYXlqcw==" title="https://travis-ci.org/iamkun/dayjs"><img src="https://img.shields.io/travis/iamkun/dayjs/master.svg?style=flat-square" alt="Build Status"><i class="fa fa-external-link"></i></span><br>    <span class="exturl" data-url="aHR0cHM6Ly9jb2RlY292LmlvL2doL2lhbWt1bi9kYXlqcw==" title="https://codecov.io/gh/iamkun/dayjs"><img src="https://img.shields.io/codecov/c/github/iamkun/dayjs/master.svg?style=flat-square" alt="Codecov"><i class="fa fa-external-link"></i></span><br>    <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2lhbWt1bi9kYXlqcy9ibG9iL21hc3Rlci9MSUNFTlNF" title="https://github.com/iamkun/dayjs/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/dayjs.svg?style=flat-square" alt="License"><i class="fa fa-external-link"></i></span><br>    <br><br>    <span class="exturl" data-url="aHR0cHM6Ly9zYXVjZWxhYnMuY29tL3UvZGF5anM=" title="https://saucelabs.com/u/dayjs"><br>        <img width="750" src="https://user-images.githubusercontent.com/17680888/40040137-8e3323a6-584b-11e8-9dba-bbe577ee8a7b.png" alt="Sauce Test Status"><br>    <i class="fa fa-external-link"></i></span><br></p>
 
+<blockquote>
+<p>Day.js 是一个轻量的处理时间和日期的 JavaScript 库，和 Moment.js 的 API 设计保持完全一样. 如果您曾经用过 Moment.js, 那么您已经知道如何使用 Day.js</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dayjs().startOf(<span class="string">'month'</span>).add(<span class="number">1</span>, <span class="string">'day'</span>).set(<span class="string">'year'</span>, <span class="number">2018</span>).format(<span class="string">'YYYY-MM-DD HH:mm:ss'</span>);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>🕒 和 Moment.js 相同的 API 和用法</li>
+<li>💪 不可变数据 (Immutable)</li>
+<li>🔥 支持链式操作 (Chainable)</li>
+<li>🌐 国际化 I18n</li>
+<li>📦 仅 2kb 大小的微型库</li>
+<li>👫 全浏览器兼容</li>
+</ul>
+<hr>
+<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install dayjs --save</span><br></pre></td></tr></table></figure>
+<p>📚<a href="./Installation.md">安装指南</a></p>
+<h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><p>Day.js 有很多 API 来解析、处理、校验、增减、展示时间和日期</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">dayjs(<span class="string">'2018-08-08'</span>) <span class="comment">// 解析</span></span><br><span class="line"></span><br><span class="line">dayjs().format(<span class="string">'&#123;YYYY&#125; MM-DDTHH:mm:ss SSS [Z] A'</span>) <span class="comment">// 展示</span></span><br><span class="line"></span><br><span class="line">dayjs().set(<span class="string">'month'</span>, <span class="number">3</span>).month() <span class="comment">// 获取</span></span><br><span class="line"></span><br><span class="line">dayjs().add(<span class="number">1</span>, <span class="string">'year'</span>) <span class="comment">// 处理</span></span><br><span class="line"></span><br><span class="line">dayjs().isBefore(dayjs()) <span class="comment">// 查询</span></span><br></pre></td></tr></table></figure>
+<p>📚<a href="./API-reference.md">API 参考</a></p>
+<h3 id="国际化-I18n"><a href="#国际化-I18n" class="headerlink" title="国际化 I18n"></a>国际化 I18n</h3><p>Day.js 支持国际化</p>
+<p>但除非手动加载，多国语言默认是不会被打包到工程里的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'dayjs/locale/es'</span> <span class="comment">// 按需加载</span></span><br><span class="line"></span><br><span class="line">dayjs.locale(<span class="string">'es'</span>) <span class="comment">// 全局使用西班牙语</span></span><br><span class="line"></span><br><span class="line">dayjs(<span class="string">'2018-05-05'</span>).locale(<span class="string">'zh-cn'</span>).format() <span class="comment">// 在这个实例上使用简体中文</span></span><br></pre></td></tr></table></figure>
+<p>📚<a href="./I18n.md">国际化 I18n</a></p>
+<h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><p>插件是一些独立的程序，可以给 Day.js 增加新功能和扩展已有功能</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> advancedFormat <span class="keyword">from</span> <span class="string">'dayjs/plugin/advancedFormat'</span> <span class="comment">// 按需加载插件</span></span><br><span class="line"></span><br><span class="line">dayjs.extend(advancedFormat) <span class="comment">// 使用插件</span></span><br><span class="line"></span><br><span class="line">dayjs().format(<span class="string">'Q Do k kk X x'</span>) <span class="comment">// 使用扩展后的API</span></span><br></pre></td></tr></table></figure>
+<p>📚<a href="./Plugin.md">插件列表</a></p>
+<h2 id="开源协议"><a href="#开源协议" class="headerlink" title="开源协议"></a>开源协议</h2><p>Day.js 遵循 <a href="../../LICENSE">MIT 开源协议</a>.</p>
 
-Day.js 是一个轻量的处理时间和日期的 JavaScript 库，和 Moment.js 的 API 设计保持完全一样. 如果您曾经用过 Mom
-              ...
-            </p>
-          <!--noindex-->
           
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/11/30/DayJs/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
         
       
     </div>
@@ -1438,24 +1761,39 @@ Day.js 是一个轻量的处理时间和日期的 JavaScript 库，和 Moment.js
       
         
           
-            <p>
-              vue components
+            <h1 id="vue-components"><a href="#vue-components" class="headerlink" title="vue components"></a>vue components</h1><p><span class="exturl" data-url="aHR0cHM6Ly93d3cubnBtanMuY29tL3BhY2thZ2UvdnVlcXItbmV3" title="https://www.npmjs.com/package/vueqr-new"><img src="https://img.shields.io/npm/v/vueqr-new.svg?style=flat-square" alt="npm"><i class="fa fa-external-link"></i></span><span class="exturl" data-url="aHR0cHM6Ly93d3cubnBtanMuY29tL3BhY2thZ2UvdnVlcXItbmV3" title="https://www.npmjs.com/package/vueqr-new"><img src="https://img.shields.io/npm/dt/vueqr-new.svg?style=flat-square" alt="npm"><i class="fa fa-external-link"></i></span><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0phY2stSW4vdnVlUXItbmV3L21hc3Rlci9saWNlbnNl" title="https://github.com/Jack-In/vueQr-new/master/license"><img src="https://img.shields.io/npm/l/vueqr-new.svg?style=flat-square" alt="npm"><i class="fa fa-external-link"></i></span></p>
+<blockquote>
+<h3 id="快速安装"><a href="#快速安装" class="headerlink" title="快速安装"></a>快速安装</h3></blockquote>
+<h3 id="install"><a href="#install" class="headerlink" title="install"></a>install</h3><p>快速添加 <code>vueqr-new</code> 组件到 app 中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save vueqr-new</span><br></pre></td></tr></table></figure>
+<h3 id="components"><a href="#components" class="headerlink" title="components"></a>components</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vue-qr</span> <span class="attr">:config</span>=<span class="string">"config"</span> <span class="attr">:text</span>=<span class="string">"text"</span>&gt;</span><span class="tag">&lt;/<span class="name">vue-qr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> vueQr <span class="keyword">from</span> <span class="string">'vueqr-new'</span>;</span></span><br><span class="line"><span class="actionscript"><span class="keyword">const</span> config = &#123;</span></span><br><span class="line"><span class="actionscript">  <span class="comment">// 容错等级</span></span></span><br><span class="line"><span class="actionscript">  errorCorrectionLevel: <span class="string">'H'</span>,</span></span><br><span class="line"><span class="actionscript">  <span class="comment">// 图片类型</span></span></span><br><span class="line"><span class="actionscript">  type: <span class="string">'image/png'</span>,</span></span><br><span class="line"><span class="undefined">  rendererOpts: &#123;</span></span><br><span class="line"><span class="undefined">  quality: 0.3</span></span><br><span class="line"><span class="undefined">  &#125;,</span></span><br><span class="line"><span class="actionscript">  <span class="comment">// 边框与二维码之间的间距</span></span></span><br><span class="line"><span class="undefined">  margin: 0,</span></span><br><span class="line"><span class="actionscript">  <span class="comment">// 缩放倍数</span></span></span><br><span class="line"><span class="undefined">  scale: 4,</span></span><br><span class="line"><span class="undefined">  width: 500,</span></span><br><span class="line"><span class="undefined">  maskPattern:1,</span></span><br><span class="line"><span class="undefined">  color: &#123;</span></span><br><span class="line"><span class="actionscript">  dark: <span class="string">'#000000'</span>,</span></span><br><span class="line"><span class="actionscript">  light : <span class="string">"#ffffff"</span></span></span><br><span class="line"><span class="undefined">  &#125;,</span></span><br><span class="line"><span class="undefined">  style: &#123;</span></span><br><span class="line"><span class="actionscript">  width: <span class="string">'128px'</span>,</span></span><br><span class="line"><span class="actionscript">  border: <span class="string">'1px solid #ccc'</span></span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="undefined">  data() &#123;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="actionscript">      text: <span class="string">'https://example.com'</span>,</span></span><br><span class="line"><span class="undefined">      config: config</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  &#125;,</span></span><br><span class="line"><span class="undefined">  components: &#123;</span></span><br><span class="line"><span class="undefined">    vueQr</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Component-props"><a href="#Component-props" class="headerlink" title="Component props"></a>Component props</h2><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>属性描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>config</td>
+<td>Object</td>
+<td>qrcode option</td>
+</tr>
+<tr>
+<td>text</td>
+<td>String</td>
+<td>qrcode value</td>
+</tr>
+</tbody>
+</table>
+<h2 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h2><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3pwYW8vcXJjb2RlLnJlYWN0" title="https://github.com/zpao/qrcode.react">“node-qrcode”<i class="fa fa-external-link"></i></span></p>
+<blockquote>
+<h3 id="License"><a href="#License" class="headerlink" title="License"></a>License</h3></blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0phY2stSW4vdnVlUXItbmV3L2Jsb2IvbWFzdGVyL0xJQ0VOU0U=" title="https://github.com/Jack-In/vueQr-new/blob/master/LICENSE">MIT<i class="fa fa-external-link"></i></span></p>
 
-快速安装
-install快速添加 vueqr-new 组件到 app 中
-npm install --save vueqr-new
-components&lt;template&gt;  &lt;div&gt;    &lt;vue-qr :config="confi
-              ...
-            </p>
-          <!--noindex-->
           
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/03/12/vueqr-new/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
         
       
     </div>
@@ -1610,6 +1948,8 @@ components&lt;template&gt;  &lt;div&gt;    &lt;vue-qr :config="confi
           
 
           
+            <div class="post-description">Vuex 学习</div>
+          
 
         </div>
       </header>
@@ -1625,16 +1965,47 @@ components&lt;template&gt;  &lt;div&gt;    &lt;vue-qr :config="confi
 
       
         
-          Vuex 学习
-          <!--noindex-->
           
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/03/12/Vuex/">
-                阅读全文 &raquo;
-              </a>
-            </div>
+            <h1 id="Vue-状态管理插件学习"><a href="#Vue-状态管理插件学习" class="headerlink" title="Vue 状态管理插件学习"></a>Vue 状态管理插件学习</h1><ul>
+<li>vuex vue 提供的数据状态管理插件（俗称数据共享中心）</li>
+<li><p>state（数据商店也就是数据仓库）,mutations（定义更改数据的方法）</p>
+</li>
+<li><p>获取仓库中定义值的方法</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// &#123;&#123;$store.state.定义的属性&#125;&#125;</span></span><br><span class="line"><span class="comment">// 使用计算属性</span></span><br><span class="line">computed:&#123;</span><br><span class="line">	count()&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.$store.state.定义的属性</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>3.使用 vuex 中的 mapState，也就是 vuex 中提供给我们的方法</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//es6写法</span></span><br><span class="line">computed: mapState(&#123;</span><br><span class="line">	count: <span class="function"><span class="params">state</span> =&gt;</span> state.count</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>等同于</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">computed: mapState(&#123;</span><br><span class="line">	count: <span class="function"><span class="params">state</span> =&gt;</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> state.count</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>4.mapState 扩展使用</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">computed: mapState([<span class="string">'在state中定义的属性'</span>])</span><br><span class="line"><span class="comment">// 这个会根据你定义的属性名绑定到vue实例上</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>5.mutations 提交更改仓库中定义值的方法（修改状态）</li>
+<li>使用$store.commit(‘调用定义在 mutations 中定义的方法名’，要传递给调用方法的参数)</li>
+<li>获取状态管理器中定义的方法(mutations)</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mutations = &#123;</span><br><span class="line">	<span class="comment">// 定义一个加的方法</span></span><br><span class="line">	add(state) &#123;</span><br><span class="line">		state.count++</span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="comment">// 定义一个减的方法</span></span><br><span class="line">	reduce(state) &#123;</span><br><span class="line">		state.count--</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 调用方法</span></span><br><span class="line"><span class="comment">// 在vue中使用import导入辅助函数</span></span><br><span class="line"><span class="keyword">import</span> &#123; mapState, mapMutations &#125; <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line"></span><br><span class="line">methods: mapMutations([<span class="string">'add'</span>, <span class="string">'reduce'</span>])</span><br><span class="line"><span class="comment">// 或</span></span><br><span class="line">methods: mapMutations([(countAdd: <span class="string">'add'</span>), (countReauce: <span class="string">'reduce'</span>)])</span><br></pre></td></tr></table></figure>
+<ul>
+<li>6.vuex 中的计算属性（过滤属性）getters</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义方法</span></span><br><span class="line"><span class="keyword">const</span> getters = &#123;</span><br><span class="line">  count:<span class="function"><span class="keyword">function</span>(<span class="params">state</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> state.count += <span class="number">100</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 或者</span></span><br><span class="line">	count: <span class="function"><span class="params">state</span> =&gt;</span> &#123; <span class="keyword">return</span> state.count += <span class="number">100</span> &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用方法</span></span><br><span class="line"><span class="keyword">import</span> &#123; mapState,mapMutations,mapGetters &#125; <span class="keyword">from</span> <span class="string">'vuex'</span>;</span><br><span class="line"></span><br><span class="line">computed: mapGetters(&#123;</span><br><span class="line">	count: <span class="function">(<span class="params">state</span>) =&gt;</span> &#123; <span class="keyword">return</span> state.count &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>7.vuex 中的 actions，异步提交方式</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> actions = &#123;</span><br><span class="line">	<span class="comment">// context：上下文对象，这里你可以理解称store本身。</span></span><br><span class="line">	addAction(context) &#123;</span><br><span class="line">		context.commit(<span class="string">'add'</span>, <span class="number">10</span>)</span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="comment">// &#123;commit&#125;：直接把commit对象传递过来，可以让方法体逻辑和代码更清晰明了。</span></span><br><span class="line">	reduceAction(&#123; commit &#125;) &#123;</span><br><span class="line">		commit(<span class="string">'reduce'</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>8.module 模块组</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义模块，和定义一个store实例一样只不过把封装store的全部方法和属性，又封装在了一个模块中</span></span><br><span class="line"><span class="keyword">const</span> moduleA=&#123;</span><br><span class="line">  state,</span><br><span class="line">  mutations,</span><br><span class="line">  getters,</span><br><span class="line">  actions</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 调用方法</span></span><br><span class="line">modules: &#123;</span><br><span class="line">  <span class="comment">//模块别名:模块名，记得要使用import引入模块</span></span><br><span class="line">	a:moduleA</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//使用模块值和方法</span></span><br><span class="line">和以上的使用方法一样，只不过前边加一个模块别名</span><br></pre></td></tr></table></figure>
+
           
-          <!--/noindex-->
         
       
     </div>
@@ -1805,22 +2176,126 @@ components&lt;template&gt;  &lt;div&gt;    &lt;vue-qr :config="confi
       
         
           
-            <p>
-              #Typora For Markdown 语法
-Learning-Markdown (Markdown 入门参考)[TOC]
-###数学表达式
-要启用这个功能，首先到Preference-&gt;Editor中启用。然后使用$符号包裹 Tex 命令，例如：$lim_{x \to \infty} \ 
-              ...
-            </p>
-          <!--noindex-->
+            <p>#Typora For Markdown 语法</p>
+<p><span class="exturl" data-url="aHR0cDovL3hpYW5iYWkubWUvbGVhcm4tbWQvaW5kZXguaHRtbA==" title="http://xianbai.me/learn-md/index.html">Learning-Markdown (Markdown 入门参考)<i class="fa fa-external-link"></i></span><br>[TOC]</p>
+<p>###数学表达式</p>
+<p>要启用这个功能，首先到<code>Preference</code>-&gt;<code>Editor</code>中启用。然后使用<code>$</code>符号包裹 Tex 命令，例如：<code>$lim_{x \to \infty} \ exp(-x)=0$</code>将产生如下的数学表达式：</p>
+<p>$\lim_{x \to \infty} \exp(-x)=0$</p>
+<p>###下标</p>
+<p>下标使用<code>~</code>包裹，例如：<code>H~2~O</code>将产生 H~2~O, 即水的分子式。</p>
+<p>###上标</p>
+<p>上标使用<code>^</code>包裹，例如：<code>y^2^=4</code>将产生表达式 y^2^ = 4</p>
+<p>###插入表情:happy:</p>
+<p>使用<code>:happy:</code>输入表情:happy:,使用<code>:sad:</code>输入表情:sad:,使用<code>:cry:</code>输入表情:cry:等。以此类推！</p>
+<h3 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h3><p>用 HTML 的语法<code>&lt;u&gt;Underline&lt;/u&gt;</code>将产生下划线<u>Underline</u>.</p>
+<h3 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h3><p>GFM 添加了删除文本的语法，这是标准的 Markdown 语法木有的。使用<code>~~</code>包裹的文本将会具有删除的样式，例如<code>~删除文本~</code>将产生<del>删除文本</del>的样式。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><ul>
+<li>使用`包裹的内容将会以代码样式显示，例如</li>
+</ul>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用`printf()`</span><br></pre></td></tr></table></figure>
+<p>则会产生<code>printf()</code>样式。</p>
+<ul>
+<li><p>输入<code>~~~</code>或者<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- `</span><br></pre></td></tr></table></figure></p>
+<p>​<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> Class HelloWorld&#123;</span><br><span class="line">  System.out.println(<span class="string">"Hello World!"</span>);</span><br><span class="line">&#125;</span><br><span class="line">​</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">将会产生</span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line">public Class HelloWorld&#123;</span><br><span class="line">  System.out.println(&quot;Hello World!&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><p>使用两个*号或者两个_包裹的内容将会被强调。例如</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**使用两个*号强调内容**</span></span><br><span class="line"><span class="strong">__使用两个下划线强调内容__</span></span><br></pre></td></tr></table></figure>
+<p>将会输出</p>
+<p><strong>使用两个*号强调内容</strong><br><strong>使用两个下划线强调内容</strong><br>Typroa 推荐使用两个*号。</p>
+<h3 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h3><p>在标准的 Markdown 语法中，*和_包裹的内容会是斜体显示，但是 GFM 下划线一般用来分隔人名和代码变量名，因此我们推荐是用星号来包裹斜体内容。如果要显示星号，则使用转义：</p>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">\*</span></span><br></pre></td></tr></table></figure>
+<h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><p>我们可以通过拖拉的方式，将本地文件夹中的图片或者网络上的图片插入。</p>
+<p><img src="http://typora.io/img/drag-img.gif" alt="drag and drop image"></p>
+<p>​</p>
+<p>​</p>
+</li>
+</ul>
+<h3 id="插入-URL-连接"><a href="#插入-URL-连接" class="headerlink" title="插入 URL 连接"></a>插入 URL 连接</h3><p>使用尖括号包裹的 url 将产生一个连接，例如：<code>&lt;www.baidu.com&gt;</code>将产生连接:&lt;<span class="exturl" data-url="aHR0cDovL3d3dy5iYWlkdS5jb20mZ3Q7" title="http://www.baidu.com&gt;">www.baidu.com&gt;<i class="fa fa-external-link"></i></span>.</p>
+<p>如果是标准的 url，则会自动产生连接，例如:<span class="exturl" data-url="aHR0cDovL3d3dy5nb29nbGUuY29t" title="http://www.google.com">www.google.com<i class="fa fa-external-link"></i></span></p>
+<h3 id="目录列表-Table-of-Contents（TOC）"><a href="#目录列表-Table-of-Contents（TOC）" class="headerlink" title="目录列表 Table of Contents（TOC）"></a>目录列表 Table of Contents（TOC）</h3><p>输入[toc]然后回车，将会产生一个目录，这个目录抽取了文章的所有标题，自动更新内容。</p>
+<h3 id="水平分割线"><a href="#水平分割线" class="headerlink" title="水平分割线"></a>水平分割线</h3><p>使用<code>***</code>或者<code>---</code>，然后回车，来产生水平分割线。</p>
+<hr>
+<h3 id="标注"><a href="#标注" class="headerlink" title="标注"></a>标注</h3><p>我们可以对某一个词语进行标注。例如</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">某些人用过了才知道<span class="selector-attr">[^注释]</span></span><br><span class="line"><span class="selector-attr">[^注释]</span><span class="selector-pseudo">:Somebody</span> <span class="selector-tag">that</span> <span class="selector-tag">I</span> <span class="selector-tag">used</span> <span class="selector-tag">to</span> <span class="selector-tag">know</span>.</span><br></pre></td></tr></table></figure>
+<p>将产生：</p>
+<p>某些人用过了才知道[^注释]<br>[^注释]: Somebody that I used to know.</p>
+<p>把鼠标放在<code>注释</code>上，将会有提示内容。</p>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="params">|姓名|</span>性别<span class="params">|毕业学校|</span>工资<span class="params">|</span></span><br><span class="line"><span class="params">|</span><span class="symbol">:---|</span><span class="symbol">:---</span><span class="symbol">:|</span><span class="symbol">:---</span><span class="symbol">:|---</span><span class="symbol">:|</span></span><br><span class="line"><span class="params">|杨洋|</span>男<span class="params">|重庆交通大学|</span><span class="number">3200</span><span class="params">|</span></span><br><span class="line"><span class="params">|</span>峰哥<span class="params">|男|</span>贵州大学<span class="params">|5000|</span></span><br><span class="line"><span class="params">|坑货|</span>女<span class="params">|北京大学|</span><span class="number">2000</span><span class="params">|</span></span><br></pre></td></tr></table></figure>
+<p>将产生:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">姓名</th>
+<th style="text-align:center">性别</th>
+<th style="text-align:center">毕业学校</th>
+<th style="text-align:right">工资</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">杨洋</td>
+<td style="text-align:center">男</td>
+<td style="text-align:center">重庆交通大学</td>
+<td style="text-align:right">3200</td>
+</tr>
+<tr>
+<td style="text-align:left">峰哥</td>
+<td style="text-align:center">男</td>
+<td style="text-align:center">贵州大学</td>
+<td style="text-align:right">5000</td>
+</tr>
+<tr>
+<td style="text-align:left">坑货</td>
+<td style="text-align:center">女</td>
+<td style="text-align:center">北京大学</td>
+<td style="text-align:right">2000</td>
+</tr>
+</tbody>
+</table>
+<p>其中代码的第二行指定对齐的方式，第一个是左对齐，第二个和第三个是居中，最后一个是右对齐。</p>
+<h3 id="数学表达式块"><a href="#数学表达式块" class="headerlink" title="数学表达式块"></a>数学表达式块</h3><p>输入两个美元符号，然后回车，就可以输入数学表达式块了。例如：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="formula">$$<span class="tag">\<span class="name">mathbf</span><span class="string">&#123;V&#125;</span></span>_1 <span class="tag">\<span class="name">times</span></span> <span class="tag">\<span class="name">mathbf</span><span class="string">&#123;V&#125;</span></span>_2 =  <span class="tag">\<span class="name">begin</span><span class="string">&#123;vmatrix&#125;</span></span> <span class="tag">\<span class="name">mathbf</span><span class="string">&#123;i&#125;</span></span> &amp; <span class="tag">\<span class="name">mathbf</span><span class="string">&#123;j&#125;</span></span> &amp; <span class="tag">\<span class="name">mathbf</span><span class="string">&#123;k&#125;</span></span> <span class="tag">\<span class="name">\</span></span><span class="tag">\<span class="name">frac</span><span class="string">&#123;\partial X&#125;</span><span class="string">&#123;\partial u&#125;</span></span> &amp;  <span class="tag">\<span class="name">frac</span><span class="string">&#123;\partial Y&#125;</span><span class="string">&#123;\partial u&#125;</span></span> &amp; 0 <span class="tag">\<span class="name">\</span></span><span class="tag">\<span class="name">frac</span><span class="string">&#123;\partial X&#125;</span><span class="string">&#123;\partial v&#125;</span></span> &amp;  <span class="tag">\<span class="name">frac</span><span class="string">&#123;\partial Y&#125;</span><span class="string">&#123;\partial v&#125;</span></span> &amp; 0 <span class="tag">\<span class="name">\</span></span><span class="tag">\<span class="name">end</span><span class="string">&#123;vmatrix&#125;</span></span>$$</span></span><br></pre></td></tr></table></figure>
+<p>将会产生:</p>
+<p>$$\mathbf{V}_1 \times \mathbf{V}_2 = \begin{vmatrix} \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\frac{\partial X}{\partial u} &amp; \frac{\partial Y}{\partial u} &amp; 0 \\frac{\partial X}{\partial v} &amp; \frac{\partial Y}{\partial v} &amp; 0 \\end{vmatrix}$$</p>
+<h3 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h3><p>使用如下的代码创建任务列表，在[]中输入 x 表示完成，也可以通过点击选择完成或者没完成。</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- <span class="string">[ ]</span> 吃饭</span><br><span class="line">- <span class="string">[ ]</span> 逛街</span><br><span class="line">- <span class="string">[ ]</span> 看电影</span><br><span class="line">- <span class="string">[ ]</span> 约泡</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>[x] 吃饭</p>
+<pre><code>​
+</code></pre></li>
+<li><p>[x] 逛街</p>
+<pre><code>​
+</code></pre></li>
+<li><p>[x] 看电影</p>
+<pre><code>​
+</code></pre></li>
+<li><p>[x] 约泡</p>
+</li>
+</ul>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>输入+, -, *,创建无序的列表，使用任意数字开头，创建有序列表，例如：</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*<span class="strong">*无序的列表*</span><span class="strong">*</span></span><br><span class="line"><span class="strong">*</span> tfboys</span><br><span class="line"><span class="bullet">* </span>杨洋</span><br><span class="line"><span class="bullet">* </span>我爱你</span><br></pre></td></tr></table></figure>
+<p><strong>无序的列表</strong></p>
+<ul>
+<li>tfboys</li>
+<li>杨洋</li>
+<li>我爱你</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**有序的列表**</span></span><br><span class="line"><span class="bullet">1. </span>苹果</span><br><span class="line"><span class="bullet">6. </span>香蕉</span><br><span class="line"><span class="bullet">10. </span>我都不喜欢</span><br></pre></td></tr></table></figure>
+<p><strong>有序的列表</strong></p>
+<ol>
+<li>苹果</li>
+<li>香蕉</li>
+<li>我都不喜欢</li>
+</ol>
+<h3 id="块引用"><a href="#块引用" class="headerlink" title="块引用"></a>块引用</h3><p>使用&gt;来插入块引用。例如：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">这是一个块引用！</span></span><br></pre></td></tr></table></figure>
+<p>将产生：</p>
+<blockquote>
+<p>这是一个块引用！</p>
+</blockquote>
+<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>使用#表示一级标题，##表示二级标题，以此类推，有 6 个标题。</p>
+
           
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/03/12/typora/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
         
       
     </div>
@@ -1975,184 +2450,7 @@ Learning-Markdown (Markdown 入门参考)[TOC]
           
 
           
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          Webpack打包工具语法学习
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2017/12/29/Webpack/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://js-mark.com/2017/12/29/JavaScript-modules/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark">
-      <meta itemprop="description" content="Personal Technology Blog">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2017/12/29/JavaScript-modules/" class="post-title-link" itemprop="url">JavaScript模块化语法总结</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2017-12-29 00:28:16" itemprop="dateCreated datePublished" datetime="2017-12-29T00:28:16+08:00">2017-12-29</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-12-01 19:36:36" itemprop="dateModified" datetime="2018-12-01T19:36:36+08:00">2018-12-01</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
+            <div class="post-description">Webpack打包工具语法学习</div>
           
 
         </div>
@@ -2169,16 +2467,45 @@ Learning-Markdown (Markdown 入门参考)[TOC]
 
       
         
-          服务端模块化规范
-          <!--noindex-->
           
-            <div class="post-button text-center">
-              <a class="btn" href="/2017/12/29/JavaScript-modules/">
-                阅读全文 &raquo;
-              </a>
-            </div>
+            <h1 id="Webpack"><a href="#Webpack" class="headerlink" title="Webpack"></a>Webpack</h1><ul>
+<li>安装 webpack</li>
+<li>配置 webpack.config.js<blockquote>
+<p>官方教程：<span class="exturl" data-url="aHR0cHM6Ly9kb2Mud2VicGFjay1jaGluYS5vcmcvY29uZmlndXJhdGlvbi8jLQ==" title="https://doc.webpack-china.org/configuration/#-">https://doc.webpack-china.org/configuration/#-<i class="fa fa-external-link"></i></span></p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">	entry: <span class="string">'./foo.js'</span>,</span><br><span class="line">		output: &#123;</span><br><span class="line">		path: path.resolve(__dirname, <span class="string">'dist'</span>),</span><br><span class="line">		filename: <span class="string">'foo.bundle.js'</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">module</span>:</span><br><span class="line">		rules: [</span><br><span class="line">			&#123;</span><br><span class="line">				test: <span class="regexp">/\.(js|jsx)$/</span>,</span><br><span class="line">				use: <span class="string">'babel-loader'</span>，</span><br><span class="line">				include: [</span><br><span class="line">		  path.resolve(__dirname, <span class="string">"app"</span>)</span><br><span class="line">		],</span><br><span class="line">		exclude: [</span><br><span class="line">		  path.resolve(__dirname, <span class="string">"app/demo-files"</span>)</span><br><span class="line">		],</span><br><span class="line">		<span class="comment">// 这里是匹配条件，每个选项都接收一个正则表达式或字符串</span></span><br><span class="line">		<span class="comment">// test 和 include 具有相同的作用，都是必须匹配选项</span></span><br><span class="line">		<span class="comment">// exclude 是必不匹配选项（优先于 test 和 include）</span></span><br><span class="line">		<span class="comment">// 最佳实践：</span></span><br><span class="line">		<span class="comment">// - 只在 test 和 文件名匹配 中使用正则表达式</span></span><br><span class="line">		<span class="comment">// - 在 include 和 exclude 中使用绝对路径数组</span></span><br><span class="line">		<span class="comment">// - 尽量避免 exclude，更倾向于使用 include</span></span><br><span class="line">			&#125;</span><br><span class="line">		]</span><br><span class="line">		plugins: [</span><br><span class="line">		<span class="keyword">new</span> (webpack.optimize.UglifyJsPlugin)</span><br><span class="line">		<span class="keyword">new</span> HtmlWebpackPlugin(template: <span class="string">'./src/index.html'</span>)</span><br><span class="line">	  ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>模块打包（默认只能打包 JS 模块，规则 CommonJS 等模块规范），让 webpack 支持其他文件类型打包，要选择合适的 loader - nodejs 书写模块规范 模块化规范 CommonJs,AMD,ES6 modules,</li>
+<li>Webpack - build-tool 构建工具 - loader webpack 默认只能打包 JS，loader 可以帮助我们打包其他的文件类型 - sass-loader 下载时，必须安装 ruby 或者 python 环境才能使用； - 安装 webpack-dev-server 热启动插件，必须在项目在安装 webpack，要不然会报错！ - webpack 使用方法：<br>在命令行 输入 webpack 入口文件(app.js) 输出文件（build.js） - 配置 webpack ； 使用 webpack.config.js；让 webpack 支持其他文件类型打包，要选择合适的 loader - url-loader 和 file-loader 类似，url-loader 加载不了的使用 file-loader 加载； - HtmlWebpackPlugin 插件(自动在 output 目录中生成文件)以及，配置安装</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// npm install --save-dev html-webpack-plugin</span></span><br><span class="line"><span class="comment">// 在webpack.config.js中配置：</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"><span class="keyword">const</span> HtmlWebpackPlugin = <span class="built_in">require</span>(<span class="string">'html-webpack-plugin'</span>)</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">	entry: &#123;</span><br><span class="line">		app: <span class="string">'./src/index.js'</span>,</span><br><span class="line">		print: <span class="string">'./src/print.js'</span></span><br><span class="line">	&#125;,</span><br><span class="line">	plugins: [</span><br><span class="line">		<span class="keyword">new</span> cleanWebpackPlugin([<span class="string">'dist'</span>]), <span class="comment">//数组内可以放置多个要删除的目录，放置在HtmlWebpackPlugin插件前</span></span><br><span class="line">		<span class="keyword">new</span> HtmlWebpackPlugin(&#123;</span><br><span class="line">			title: <span class="string">'页面标题'</span>, <span class="comment">//生成页面标题</span></span><br><span class="line">			filename: <span class="string">'index.html'</span>, <span class="comment">//要生成的文件名</span></span><br><span class="line">			template: <span class="string">'index.html'</span> <span class="comment">//要生成页面的时候的模板</span></span><br><span class="line">		&#125;)</span><br><span class="line">	],</span><br><span class="line">	output: &#123;</span><br><span class="line">		filename: <span class="string">'[name].bundle.js'</span>,</span><br><span class="line">		path: path.resolve(__dirname, <span class="string">'dist'</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>JSon 文件中不能以有注释</li>
+<li>使用 package.json 中的 scripts 键名是要启动的命令的简写，值是要启动的命令（这个个命令可以随意写，反正就是要在命令行中执行的命令，就可以写在这里）；</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 例:</span></span><br><span class="line"> <span class="string">"scripts"</span>: &#123;</span><br><span class="line">   <span class="string">"dev"</span>: <span class="string">"webpack-dev-server --inline --hot --open --port 3000"</span></span><br><span class="line"> &#125;,</span><br><span class="line"> <span class="comment">// 启动命令为 npm run dev</span></span><br><span class="line"> <span class="comment">// 例:</span></span><br><span class="line"> <span class="string">"scripts"</span>: &#123;</span><br><span class="line">   <span class="string">"start"</span>: <span class="string">"webpack-dev-server --inline --hot --open --port 3000"</span></span><br><span class="line"> &#125;,</span><br><span class="line"> <span class="comment">// 启动命令为 npm start</span></span><br><span class="line"><span class="comment">// 如果键名是start，可以省略写run</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>配置 HMR 模块热替换，热替换这个插件，必须配置在项目目录，因为配置全局的话，不会有热替换的效果，浏览器不会自动刷新；插件 webpack-dev-sever 在 package.json</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- <span class="string">"scripts"</span>: &#123;</span><br><span class="line">	<span class="string">"start"</span>: <span class="string">"webpack-dev-server --inline --hot --open --port 3000"</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>配置 ES6 语法降级，bable-loader，以及 bable-core,bable 依赖的核心库，bable-preset-env 语法字典库</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  test: <span class="regexp">/\.js$/</span>,</span><br><span class="line">  exclude: <span class="regexp">/(node_modules|bower_components)/</span>,<span class="comment">//忽略目录</span></span><br><span class="line">  use: &#123;</span><br><span class="line">    loader: <span class="string">'babel-loader'</span>,</span><br><span class="line">    options: &#123;</span><br><span class="line">      presets: [<span class="string">'@babel/preset-env'</span>]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>解析 vue 模板，vue-loader，这个模板安装后，可能会发生错误，就是需要在安装另外一个模块，安装上就好了！</li>
+<li>解析文件的话，要去下载各种文件类型的 loader</li>
+<li>webpack 可以打包各种模块，js 就是模块或者说是包，我们可以直接使用 CommenJS 或者 ES6 等规范的语法，导入各种各样我们需要的模块，并把它并把导入的模块用对象包裹起来，我们就可以调用里边的方法了</li>
+<li>package.json 对象中最后一个参数项，不能书写逗号</li>
+</ul>
+<h3 id="CLI"><a href="#CLI" class="headerlink" title="CLI"></a>CLI</h3><ul>
+<li>（command-line interface，命令行界面）是指可在用户提示符下键入可执行指令的界面，它通常不支持鼠标，用户通过键盘输入指令，计算机接收到指令后，予以执行。CLI 在汇编指令中也有关闭中断的意思</li>
+<li>vue-cli vue 脚手架 ，是为了快速构建一个项目环境的命令行操作工具</li>
+</ul>
+<h3 id="打包的工程目录中-src-源码所在文件，dist-发布的目录"><a href="#打包的工程目录中-src-源码所在文件，dist-发布的目录" class="headerlink" title="打包的工程目录中 src 源码所在文件，dist 发布的目录"></a>打包的工程目录中 src 源码所在文件，dist 发布的目录</h3>
           
-          <!--/noindex-->
         
       
     </div>
@@ -2269,7 +2596,7 @@ Learning-Markdown (Markdown 入门参考)[TOC]
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2292,7 +2619,9 @@ Learning-Markdown (Markdown 入门参考)[TOC]
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -2343,7 +2672,11 @@ Learning-Markdown (Markdown 入门参考)[TOC]
                     
                       
                     
-                    <span class="site-state-item-count">19</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
