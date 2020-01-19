@@ -2016,7 +2016,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #67cde8;
+  background: #14c121;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3125,28 +3125,28 @@ ul.breadcrumb li+li:last-child {
 }
 .content-wrap {
   padding: initial;
+  border-radius: initial;
   background: initial;
   box-shadow: initial;
-  border-radius: initial;
 }
 .post-block {
   padding: 40px;
+  border-radius: initial;
   background: #fff;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
-  border-radius: initial;
 }
 #posts > article + article .post-block {
   margin-top: 12px;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
   border-radius: initial;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
 }
 .comments {
-  padding: 40px;
   margin: auto;
   margin-top: 12px;
+  padding: 40px;
+  border-radius: initial;
   background: #fff;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
-  border-radius: initial;
 }
 .posts-expand {
   padding-top: initial;
@@ -3163,17 +3163,17 @@ ul.breadcrumb li+li:last-child {
 }
 .pagination {
   margin: 12px 0 0;
+  padding: 10px 0;
   border-top: initial;
+  border-radius: initial;
   background: #fff;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
-  border-radius: initial;
-  padding: 10px 0 10px;
 }
 .pagination .prev,
 .pagination .next,
 .pagination .page-number {
-  margin-bottom: initial;
   top: initial;
+  margin-bottom: initial;
 }
 .main {
   padding-bottom: initial;
@@ -3186,8 +3186,8 @@ ul.breadcrumb li+li:last-child {
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
 }
 .sub-menu+ #content > #posts .post-block {
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
   margin-top: 12px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .sub-menu+ #content > #posts .post-block {
@@ -3210,29 +3210,29 @@ ul.breadcrumb li+li:last-child {
   font-size: 1.7em;
 }
 .post-body h1 {
-  font-size: 1.6em;
   border-bottom: 1px solid #eee;
+  font-size: 1.6em;
 }
 .post-body h1 code {
   font-size: 1em;
 }
 .post-body h2 {
+  padding-bottom: 10px;
   font-size: 1.45em;
-  border-bottom: 1px solid #eee;
 }
 .post-body h2 code {
   font-size: 1em;
 }
 .post-body h3 {
   font-size: 1.3em;
-  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
 }
 .post-body h3 code {
   font-size: 1em;
 }
 .post-body h4 {
   font-size: 1.2em;
-  border-bottom: 1px dotted #eee;
+  padding-bottom: 10px;
 }
 .post-body h4 code {
   font-size: 1em;
@@ -3261,8 +3261,8 @@ ul.breadcrumb li+li:last-child {
   }
   .post-block {
     padding: 20px;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
     border-radius: initial;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
   }
   #posts > article + article .post-block {
     margin-top: 10px;
@@ -3283,7 +3283,7 @@ ul.breadcrumb li+li:last-child {
     margin: initial;
   }
   .posts-expand .post-button {
-    margin: 12px 0px;
+    margin: 12px 0;
   }
   .posts-expand img {
     padding: initial !important;
@@ -3291,8 +3291,8 @@ ul.breadcrumb li+li:last-child {
   .post-block {
     padding: 12px;
     min-height: auto;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
     border-radius: initial;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
   }
   #posts > article + article .post-block {
     margin-top: 8px;
