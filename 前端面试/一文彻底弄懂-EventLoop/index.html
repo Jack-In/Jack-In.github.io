@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.4.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://avatars.githubusercontent.com/u/31335385?s=60&v=4">
@@ -17,12 +17,12 @@
 
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"js-mark.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.0","exturl":true,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}};
+    var CONFIG = {"hostname":"js-mark.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":true,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}};
   </script>
 <meta name="description" content="前言 什么是 Event Loop 事件循环机制？有什么作用？为什么面试经常问到？？？我在学习浏览器和NodeJS的Event Loop时翻阅了技术类型网站上大量的文章，这些文章写的都很不错、讲解的也很到位，那为什么我还是要写这篇文章呢？其实呢是由于这些文章都是针对特定的一些案例、一些情况来解释 Event Loop，当很多篇文章凑在一起综合来看，才可以对这些概念有较为深入的理解。于是，我在看了大">
 <meta property="og:type" content="article">
@@ -33,7 +33,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://js-mark.com/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/%E4%B8%80%E6%96%87%E5%BD%BB%E5%BA%95%E5%BC%84%E6%87%82-EventLoop/1621f4d1b953533d.png">
 <meta property="article:published_time" content="2020-06-14T14:34:38.000Z">
-<meta property="article:modified_time" content="2021-03-09T15:06:30.956Z">
+<meta property="article:modified_time" content="2021-03-16T15:06:22.229Z">
 <meta property="article:author" content="Mark">
 <meta property="article:tag" content="前端开发">
 <meta property="article:tag" content="面试题">
@@ -308,7 +308,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-09 15:06:30" itemprop="dateModified" datetime="2021-03-09T15:06:30+00:00">2021-03-09</time>
+        <time title="修改时间：2021-03-16 15:06:22" itemprop="dateModified" datetime="2021-03-16T15:06:22+00:00">2021-03-16</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -333,7 +333,7 @@
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
 <p>什么是 <code>Event Loop</code> 事件循环机制？有什么作用？为什么面试经常问到？？？我在学习浏览器和NodeJS的Event Loop时翻阅了技术类型网站上大量的文章，这些文章写的都很不错、讲解的也很到位，那为什么我还是要写这篇文章呢？其实呢是由于这些文章都是针对特定的一些案例、一些情况来解释 <code>Event Loop</code>，当很多篇文章凑在一起综合来看，才可以对这些概念有较为深入的理解。<br>于是，我在看了大量文章之后，想要写这么一篇博客，不采用官方的描述，结合自己的理解以及示例代码，用最通俗的语言表达出来。希望大家可以通过这篇文章，了解到Event Loop到底是一种什么机制，浏览器和NodeJS的Event Loop又有什么区别。如果在文中出现书写错误的地方，欢迎大家留言一起探讨。(PS: 其实是很多篇文章组合在一起后才理解了这些。。。如果对你有用，就请给个Star吧~ 如有错误，欢迎指出~)</p>
 </blockquote>
-<a id="more"></a>
+<span id="more"></span>
 
 <h2 id="Event-Loop-是什么？"><a href="#Event-Loop-是什么？" class="headerlink" title="Event Loop 是什么？"></a><code>Event Loop</code> 是什么？</h2><blockquote>
 <p><code>Event Loop</code> 是一个执行模型，在不同的地方有不同的实现。浏览器和NodeJS基于不同的技术实现了各自的 <code>Event Loop</code>。</p>
@@ -358,6 +358,7 @@
 <li>请认真阅读以下代码，并尝试输出？</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;timeout1&#x27;</span>);</span><br><span class="line">&#125;, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;start&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">Promise</span>.resolve().then(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;promise1&#x27;</span>);</span><br><span class="line">  <span class="built_in">Promise</span>.resolve().then(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;promise2&#x27;</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">Promise</span>.resolve().then(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">&#x27;promise3&#x27;</span>);</span><br><span class="line">      &#125;);</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;timeout2&#x27;</span>)</span><br><span class="line">  &#125;, <span class="number">0</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;done&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
 <h3 id="Microtask-与-Macrotask（宏队列和微队列）"><a href="#Microtask-与-Macrotask（宏队列和微队列）" class="headerlink" title="Microtask 与 Macrotask（宏队列和微队列）"></a>Microtask 与 Macrotask（宏队列和微队列）</h3><blockquote>
 <p>在大多数解释 JS Event Loop 的文章中，鲜有谈及 Miscrotask 和 Macrotask 这两个概念，但这两个概念却是非常的重要，我在翻阅 Zone.js Primer  时，里面就经常会提及这两个概念，当时也是看的云里雾里的，这也是我写这篇文章的原因之一。<br>Macrotask（宏队列），也叫tasks。 一些异步任务的回调会依次进入macro task queue（宏任务队列），等待后续被调用，这些异步任务包括：</p>
 </blockquote>
@@ -547,7 +548,7 @@
   <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js"></script>
   <script src="//cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
@@ -559,7 +560,7 @@
 
 <script>
 if (document.querySelectorAll('.pdf-container').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/pdfobject@2.2.4/pdfobject.min.js', () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/pdfobject@2.2.4/pdfobject.min.js', () => {
     document.querySelectorAll('.pdf-container').forEach(element => {
       PDFObject.embed(element.dataset.target, element, {
         pdfOpenParams: {
@@ -623,6 +624,7 @@ NexT.utils.loadComments('.gitalk-container', () => {
       owner       : 'JS-mark',
       admin       : ['JS-mark'],
       id          : '6e69743a2fb3d22d12310162b11f49c6',
+      proxy       : 'https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token',
         language: 'zh-CN',
       distractionFreeMode: true
     });
